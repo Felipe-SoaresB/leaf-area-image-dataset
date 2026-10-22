@@ -4,7 +4,7 @@
 - [x] Autorização de publicação informada por ambos.
 - [x] Repositório PRIVADO de preparação criado.
 - [x] Metadados e validador preparados e importados do projeto original.
-- [ ] Validar identidade Git blob SHA de cada CSV após importação.
+- [x] Identidade Git blob SHA dos quatro CSVs confirmada após importação (22/10/2026).
 - [ ] Executar o validador sobre os quatro CSVs reais e revisar avisos.
 - [ ] Recuperar e decodificar 205 JPEGs originais; calcular SHA-256.
 - [ ] Calcular SHA-256 de todas as 66 duplas de fotos existentes no Drive.

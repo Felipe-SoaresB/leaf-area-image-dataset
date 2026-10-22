@@ -1,0 +1,29 @@
+name: Validar metadados do dataset
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do dataset
+        uses: actions/checkout@v4
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar os quatro CSVs
+        run: python scripts/validate_dataset.py --metadata-dir metadata --output-dir validation_output
+      - name: Guardar relatório mesmo se falhar
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-metadados
+          path: validation_output/
+          if-no-files-found: warn
