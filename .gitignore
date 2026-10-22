@@ -1,0 +1,23 @@
+# Fotografias ficarão fora do Git enquanto o depósito científico não estiver preparado.
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.tif
+*.tiff
+*.zip
+*.7z
+*.tar
+*.tar.gz
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+Thumbs.db
+.DS_Store
+/resultado/
+/resultado_metadata/
+/resultado_com_imagens/
