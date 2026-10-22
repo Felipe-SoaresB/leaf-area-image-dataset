@@ -20,10 +20,12 @@ jobs:
           python-version: '3.11'
       - name: Validar os quatro CSVs
         run: python scripts/validate_dataset.py --metadata-dir metadata --output-dir validation_output
-      - name: Guardar relatório mesmo se falhar
+      - name: Exibir resumo no GitHub Actions
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: relatorio-metadados
-          path: validation_output/
-          if-no-files-found: warn
+        shell: bash
+        run: |
+          if test -f validation_output/validation_report.md; then
+            cat validation_output/validation_report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Relatório não foi gerado." >> "$GITHUB_STEP_SUMMARY"
+          fi
