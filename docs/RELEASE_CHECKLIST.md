@@ -5,15 +5,16 @@
 - [x] Repositório PRIVADO de preparação criado.
 - [x] Metadados e validador preparados e importados do projeto original.
 - [x] Identidade Git blob SHA dos quatro CSVs confirmada após importação (22/10/2026).
-- [ ] Executar o validador sobre os quatro CSVs reais e revisar avisos.
-- [ ] Recuperar e decodificar 205 JPEGs originais; calcular SHA-256.
-- [ ] Calcular SHA-256 de todas as 66 duplas de fotos existentes no Drive.
-- [ ] Fechar protocolo de controle de qualidade das 191 fotos pendentes.
+- [x] Executar a verificação de metadados no GitHub Actions; concluída com sucesso. Os avisos de Coleto permanecem documentados.
+- [x] Recuperar e decodificar 205 JPEGs originais; calcular SHA-256 (22/10/2026).
+- [x] Calcular SHA-256 de todas as 66 duplas de fotos existentes no Drive: 66/66 idênticas (22/10/2026).
+- [ ] Fechar protocolo de controle de qualidade das 191 fotos pendentes (integridade binária já aprovada).
 - [ ] Verificar EXIF, autoria, terceiros e detalhes pessoais antes do depósito.
 - [ ] Completar e verificar protocolo experimental e relação muda/folha/foto.
 - [ ] Ratificar unidades e divergências de transcrição com os coautores.
 - [ ] Definir licença apropriada para dados e código; não presumir licença.
 - [ ] Guardar confirmação escrita da autorização e créditos.
+- [ ] Sincronizar SHA256SUMS.txt e DUPLICATE_PAIR_SHA256.csv com o repositório (artefatos locais da auditoria disponíveis para download).
 - [ ] Revisar CITATION.cff, DOI, versões e depósito no Zenodo.
 - [ ] Conferir barema e critérios APC aplicáveis ao código 129.
 - [ ] Obter revisão final dos coautores antes de tornar público.
