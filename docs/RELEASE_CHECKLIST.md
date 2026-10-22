@@ -8,6 +8,10 @@
 - [x] Executar a verificação de metadados no GitHub Actions; concluída com sucesso. Os avisos de Coleto permanecem documentados.
 - [x] Recuperar e decodificar 205 JPEGs originais; calcular SHA-256 (22/10/2026).
 - [x] Calcular SHA-256 de todas as 66 duplas de fotos existentes no Drive: 66/66 idênticas (22/10/2026).
+- [x] Triagem automática preliminar de 205 JPEGs realizada (indicadores de nitidez, contraste e exposição).
+- [x] Risco EXIF identificado: 204 JPEGs contêm coordenadas GPS; 1 possui seção GPS sem coordenadas.
+- [x] Preparar 205 cópias locais sem EXIF, com hashes SHA-256 próprios e sem recompressão de imagem.
+- [x] Preparar interface e formulário para revisão humana de qualidade das 191 fotos pendentes.
 - [ ] Fechar protocolo de controle de qualidade das 191 fotos pendentes (integridade binária já aprovada).
 - [ ] Verificar EXIF, autoria, terceiros e detalhes pessoais antes do depósito.
 - [ ] Completar e verificar protocolo experimental e relação muda/folha/foto.
