@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "Cite os coautores e a versão utilizada. Acrescente o DOI após sua atribuição."
+message: "O dataset de imagens/CSVs é disponibilizado sob CC BY 4.0; cite os coautores e a versão utilizada. Acrescente o DOI após sua atribuição."
 type: dataset
 title: "Tabebuia roseoalba Leaf Area Image Dataset with ImageJ References"
 version: 1.0.2
+license: CC-BY-4.0
 authors:
   - family-names: "Neves"
     given-names: "Tatiane Morais"
