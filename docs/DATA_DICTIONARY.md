@@ -1,4 +1,4 @@
-# Dicionário de dados — v1.0.0
+# Dicionário de dados — documentação v1.0.1 (dados v1.0.0)
 
 ## release/images_v1.csv — 205 linhas (uma por fotografia)
 
@@ -8,8 +8,8 @@
 | `filename` | Nome do JPEG correspondente |
 | `capture_date`, `capture_time` | Data e hora declaradas da captura |
 | `sample_group_id` | Identificador da amostra/folha; pode ocorrer em múltiplas fotos (retakes); vazio em fotos documentais/inválidas |
-| `substrate_code` | Código normalizado do substrato conforme fonte |
-| `treatment_percent` | Percentual de tratamento conforme fonte |
+| `substrate_code` | A = areia; V = vermiculita; T = terra. O código original `v` foi normalizado como V |
+| `treatment_percent` | Nível da capacidade de retenção de água (CRA) do substrato: 25, 50, 75 ou 100% — não é percentual de mistura |
 | `replicate_id` | Identificador de bandeja/repetição da fonte |
 | `imagej_sheet_row` | Linha de referência da planilha ImageJ original |
 | `imagej_area_cm2` | Área de referência em cm²; vazio/zero não significa necessariamente medição biológica nula |
@@ -24,7 +24,7 @@
 |---|---|
 | `sample_group_id` | Identificador da amostra/grupo |
 | `canonical_image_id`, `canonical_filename` | Fotografia canônica associada |
-| `substrate_code`, `treatment_percent` | Tratamento registrado |
+| `substrate_code`, `treatment_percent` | Substrato e nível percentual de CRA do tratamento (ver tabela de códigos) |
 | `imagej_area_cm2` | Área positiva de referência em cm² do grupo |
 | `n_images` | Quantidade de fotos registradas para o grupo |
 | `extra_retake_images` | Capturas extras da mesma amostra |
@@ -36,4 +36,4 @@
 
 `tabela_mestre_v1.csv` é a fonte integral de 205 fotografias (contém IDs do Drive, notas de mapeamento e decisões de exclusão). `imagens_drive.csv` documenta arquivos físicos, IDs e duplicações. `referencias_imagej.csv` contém os 291 registros originais, incluindo valores não aproveitados em análise de imagens. `divisao_experimental_v1.csv` define os 177 grupos elegíveis e partições.
 
-As variáveis auxiliares `coleto`, `MF`, `MS` e `CRA` têm registros de origem cuja definição/unidade completa não faz parte do escopo desta versão; por isso não foram adicionadas às tabelas portáteis de área foliar.
+O significado dos tratamentos, a normalização de `v` para `V`, os estados de curadoria e as abreviações estão reunidos em [`TREATMENT_CODES.md`](TREATMENT_CODES.md). As variáveis auxiliares `coleto`, `MF`, `MS` e `CRA` da planilha foliar não foram introduzidas nas tabelas portáteis; algumas ainda necessitam confirmação de expansão ou unidade. O `CRA` numérico da planilha foliar **não deve ser confundido** com o percentual de CRA usado na irrigação.

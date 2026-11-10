@@ -1,6 +1,6 @@
 # Tabebuia roseoalba — Leaf Area Image Dataset
 
-**Dataset v1.0.0 · Curadoria consolidada**
+**Documentação v1.0.1 · Curadoria de dados v1.0.0**
 
 Conjunto de fotografias de folhas atribuídas à espécie *Tabebuia roseoalba* e metadados de áreas foliares de referência obtidas por ImageJ. O material foi organizado para permitir estudos de **estimativa de área foliar a partir de imagens**, documentação e comparação de métodos computacionais. Origem acadêmica: **Instituto Federal de Minas Gerais (IFMG), Campus Bambuí**.
 
@@ -24,6 +24,12 @@ As contagens de fotografias e de grupos de amostra são diferentes porque alguma
 ## Contexto da aquisição
 
 Segundo a coautora que forneceu o contexto experimental, a espécie é *Tabebuia roseoalba*, o experimento utilizou **DIC (Delineamento Inteiramente Casualizado)** e teve **546 mudas inicialmente plantadas**. Esse número descreve o experimento de origem, não o número de folhas ou fotos deste conjunto. A relação individual entre cada muda e imagem não foi documentada nesta versão.
+
+## Tratamentos e códigos
+
+Os substratos são **A = Areia**, **V = Vermiculita** e **T = Terra** (a variante minúscula `v` equivale a V). Os níveis **25%, 50%, 75% e 100%** correspondem a condições de irrigação relativas à **CRA — capacidade de retenção de água** do substrato. Os códigos descrevem o tratamento; não representam porcentagens de mistura dos substratos.
+
+O significado das siglas, os identificadores e os estados das tabelas está reunido em [**Códigos e abreviações**](docs/TREATMENT_CODES.md). Informações que não foram explicitadas nas planilhas originais permanecem assinaladas no dicionário, sem suposições.
 
 ## Como usar os dados
 

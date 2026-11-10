@@ -1,4 +1,4 @@
-# Dados de distribuição — v1.0.0
+# Dados de distribuição — curadoria v1.0.0, documentação v1.0.1
 
 Esta pasta reúne o **núcleo portátil do dataset** para análise de área foliar. São derivados conservadores dos quatro CSVs-fonte mantidos em `../metadata/`: nenhuma medição foi recalculada e nenhuma fotografia foi reclassificada.
 
@@ -6,6 +6,12 @@ Esta pasta reúne o **núcleo portátil do dataset** para análise de área foli
 |---|---:|---|
 | `images_v1.csv` | 205 | registro de fotografia |
 | `area_groups_v1.csv` | 177 | grupo/folha associado a uma referência positiva |
+
+## Legenda dos tratamentos
+
+- `substrate_code`: A = **Areia**, V = **Vermiculita**, T = **Terra** (`v` original é normalizado como V).
+- `treatment_percent`: 25, 50, 75 ou 100% da **CRA (capacidade de retenção de água)** do substrato; não indica composição da mistura.
+- Consulte [`docs/TREATMENT_CODES.md`](../docs/TREATMENT_CODES.md) para siglas, estados e unidades conhecidas.
 
 ## Vínculo e interpretação
 

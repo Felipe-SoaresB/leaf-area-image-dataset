@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## v1.0.1 — 09/11/2026 (documentação)
+
+- Acrescentado dicionário explícito de códigos: A = Areia, V = Vermiculita, T = Terra (normalização de `v`).
+- Documentado que 25/50/75/100 são níveis de CRA na irrigação, sem confundi-los com proporções de mistura do substrato.
+- Esclarecidas abreviações da tabela foliar, estados de inclusão, partições e relação fotografia–grupo–ImageJ.
+- **Sem mudança nas 205 fotografias, nos quatro CSVs-fonte ou nos valores das duas tabelas de distribuição.** O snapshot `snapshot/v1.0.0` permanece congelado.
+
+
 ## v1.0.0 — 09/11/2026
 
 **Congelamento da curadoria do conjunto de dados.** Nenhum valor dos quatro CSVs de origem foi reescrito nesta versão.
