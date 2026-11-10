@@ -40,7 +40,7 @@ A pasta [`release/`](release/README.md) contém uma representação portátil do
 
 Use o atributo `include_for_area_evaluation=yes` para selecionar as 191 fotografias associadas a referências de área elegíveis; para **avaliar modelos**, mantenha todas as capturas da mesma `sample_group_id` no mesmo conjunto e, quando necessário, use uma fotografia canônica por grupo para evitar pseudorreplicação.
 
-As quatro tabelas de origem auditadas foram preservadas sem alteração em [`metadata/`](metadata/README.md). O dicionário e a rastreabilidade estão em [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) e [`docs/PROVENANCE.md`](docs/PROVENANCE.md).
+As quatro tabelas de origem auditadas foram preservadas sem alteração em [`metadata/`](metadata/README.md), **mas essa pasta está atualmente acessível no repositório público e contém IDs internos do Google Drive e notas de curadoria**. Para consumo externo, prefira os CSVs sanitizados de [`release/`](release/README.md); a remoção adequada de identificadores do histórico Git ainda é uma pendência. O dicionário e a rastreabilidade estão em [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) e [`docs/PROVENANCE.md`](docs/PROVENANCE.md).
 
 ## Reprodutibilidade e integridade
 
@@ -58,8 +58,8 @@ A verificação de estrutura roda automaticamente no GitHub Actions.
 
 ## Escopo e disponibilização
 
-A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório permanece **privado**. O depósito científico público e o DOI ainda não foram realizados.
+A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório está **público no GitHub** e disponibiliza os 205 JPEGs via **Git LFS**, além das tabelas e da documentação. **Ainda não há release formal nem DOI registrado**, e as condições de licenciamento devem ser ratificadas pelos coautores antes da versão científica definitiva.
 
 Os estados de qualidade mantidos nos CSVs refletem a curadoria existente; não representam certificação visual individual das imagens. Para critérios de exclusão, decisões de associação e demais limites do conjunto, consulte [`docs/EXCLUSIONS_AND_LIMITATIONS.md`](docs/EXCLUSIONS_AND_LIMITATIONS.md). Não se deve interpretar registros de área zero como medições físicas nulas quando correspondem a ausência de referência.
 
-**Citação:** arquivo [`CITATION.cff`](CITATION.cff). O DOI será acrescentado somente quando existir.
+**Citação:** arquivo [`CITATION.cff`](CITATION.cff). O DOI será acrescentado somente quando existir. Consulte o [estado de publicação e as pendências](docs/RELEASE_CHECKLIST.md).
