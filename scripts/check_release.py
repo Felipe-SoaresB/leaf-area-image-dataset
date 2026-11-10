@@ -37,10 +37,10 @@ for row in release_images:
         "reference_status": "area_status",
         "mapping_status": "mapping_status",
         "qc_status_source": "qc_status",
-        "include_for_area_evaluation": "exclude_from_analysis",
-    }
+            }
     for pub, src in rules.items():
         assert row[pub] == original[src], f"{row['image_id']}: diferença em {pub}"
+    assert row["include_for_area_evaluation"] == ("yes" if original["exclude_from_analysis"] == "no" else "no"), f"{row['image_id']}: inclusão invertida"
 assert sum(r["include_for_area_evaluation"] == "yes" for r in release_images) == 191
 assert sum(r["include_for_area_evaluation"] == "no" for r in release_images) == 14
 src_groups = {r["sample_group_id"]: r for r in groups}
