@@ -15,8 +15,8 @@ python -m pip install -r requirements.txt
 python scripts/check_lfs_images.py
 ```
 
-Para verificar manualmente a lista dos 205 objetos: `git lfs ls-files`. O script exige **205 JPEGs decodificáveis e com os hashes de `checksums/SHA256_RELEASE_NO_EXIF.txt`**, sem metadados EXIF. O download exige permissão no repositório enquanto ele permanecer privado.
+Para verificar manualmente a lista dos 205 objetos: `git lfs ls-files`. O script exige **205 JPEGs decodificáveis e com os hashes de `checksums/SHA256_RELEASE_NO_EXIF.txt`**, sem metadados EXIF. O repositório está público. O download efetivo depende da disponibilidade dos objetos no Git LFS; a execução automatizada de validação confirmou o download autenticado por GitHub Actions, mas uma verificação de acesso anônimo ainda é recomendada.
 
 Não misturar o manifesto de originais (`SHA256_ORIGINALS.txt`) com os hashes das cópias preparadas para distribuição. As 66 duplicações da pasta original foram deduplicadas antes do envio e não representam novas fotografias.
 
-**Estado:** os 205 ponteiros e o manifesto estão no Git. A validação automática **baixou os 205 objetos LFS**, conferiu SHA-256, JPEG RGB, resolução e ausência de EXIF, e foi aprovada em 09/11/2026 (execução GitHub Actions #42733590286). O repositório ainda não é uma publicação pública e não possui DOI.
+**Estado:** os 205 ponteiros e o manifesto estão no Git. A validação automática **baixou os 205 objetos LFS**, conferiu SHA-256, JPEG RGB, resolução e ausência de EXIF, e foi aprovada em 09/11/2026 (execução GitHub Actions #42733590286). O repositório está público no GitHub e **ainda não possui DOI nem release formal**. O exame de rótulos/informações diretamente visíveis nos pixels e a ratificação da licença permanecem pendentes.
