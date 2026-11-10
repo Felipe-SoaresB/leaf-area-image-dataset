@@ -19,4 +19,4 @@ Para verificar manualmente a lista dos 205 objetos: `git lfs ls-files`. O script
 
 Não misturar o manifesto de originais (`SHA256_ORIGINALS.txt`) com os hashes das cópias preparadas para distribuição. As 66 duplicações da pasta original foram deduplicadas antes do envio e não representam novas fotografias.
 
-**Estado:** os ponteiros e o manifesto estão no Git. A validação automática por download dos objetos LFS está sendo incorporada ao GitHub Actions. O repositório ainda não é uma publicação pública e não possui DOI.
+**Estado:** os 205 ponteiros e o manifesto estão no Git. A validação automática **baixou os 205 objetos LFS**, conferiu SHA-256, JPEG RGB, resolução e ausência de EXIF, e foi aprovada em 09/11/2026 (execução GitHub Actions #42733590286). O repositório ainda não é uma publicação pública e não possui DOI.

@@ -1,5 +1,15 @@
 # Histórico de versões
 
+## v1.0.2 — 09/11/2026 (imagens no Git LFS)
+
+- Adicionadas **205 fotografias JPEG sem EXIF/GPS** à pasta `images/data/` usando Git LFS.
+- Manifesto `checksums/SHA256_RELEASE_NO_EXIF.txt` incluído e correspondente às 205 fotografias.
+- O GitHub Actions baixou **os 205 objetos LFS completos**, verificou os hashes SHA-256, formato JPEG RGB, resolução, ausência de EXIF e concordância com o índice; execução aprovada.
+- Atualizados README, instruções de download e checklist de publicação.
+- Sem alteração das medições ImageJ, dos quatro CSVs originais, das divisões experimentais ou dos critérios de inclusão.
+- O repositório permanece **privado**, sem DOI, enquanto a publicação científica externa e a licença são definidas.
+
+
 ## v1.0.1 — 09/11/2026 (documentação)
 
 - Acrescentado dicionário explícito de códigos: A = Areia, V = Vermiculita, T = Terra (normalização de `v`).

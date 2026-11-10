@@ -1,6 +1,6 @@
 # Tabebuia roseoalba — Leaf Area Image Dataset
 
-**Documentação v1.0.1 · Curadoria de dados v1.0.0**
+**Versão v1.0.2 · Metadados científicos consolidados em v1.0.0 · Fotografias disponíveis via Git LFS**
 
 Conjunto de fotografias de folhas atribuídas à espécie *Tabebuia roseoalba* e metadados de áreas foliares de referência obtidas por ImageJ. O material foi organizado para permitir estudos de **estimativa de área foliar a partir de imagens**, documentação e comparação de métodos computacionais. Origem acadêmica: **Instituto Federal de Minas Gerais (IFMG), Campus Bambuí**.
 

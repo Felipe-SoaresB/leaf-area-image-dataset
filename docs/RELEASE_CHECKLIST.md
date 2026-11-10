@@ -26,5 +26,5 @@ Não há exigência adotada de revisar manualmente cada uma das 191 fotos para *
 - [x] Configurar Git LFS exclusivamente para `images/data/*.jpg`.
 - [x] Recebido envio informado pelo usuário; confirmadas as 205 entradas Git LFS em `images/data/` e o manifesto com 205 nomes.
 - [x] Sete ponteiros amostrais com SHA-256 coincidente com o manifesto de distribuição.
-- [ ] Validar por download no GitHub Actions os 205 objetos LFS (JPEG real, hash e ausência de EXIF).
-- [ ] Registrar a chegada das imagens em nova revisão após confirmação da integridade por download.
+- [x] Validados por download no GitHub Actions os 205 objetos LFS, com JPEG RGB, SHA-256, resolução e ausência de EXIF (execução #42733590286).
+- [x] Registro de revisão **v1.0.2** para o recebimento dos arquivos; metadados da v1.0.0 mantidos.

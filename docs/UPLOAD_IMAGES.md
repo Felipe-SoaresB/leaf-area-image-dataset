@@ -36,3 +36,7 @@ Este documento não confirma que as imagens já estejam no GitHub; confira a pas
 O usuário informou que o comando de envio terminou com sucesso. Conferência no GitHub: **205 entradas `images/data/*.jpg`** na branch `main`, rastreadas por `.gitattributes` como Git LFS. O manifesto `checksums/SHA256_RELEASE_NO_EXIF.txt` tem os mesmos 205 nomes. Uma amostra distribuída de sete ponteiros LFS teve `oid sha256` coincidente com a versão sem EXIF registrada no manifesto.
 
 O passo seguinte é comprovar o **download dos objetos binários**, não apenas os ponteiros; para isso foi acrescentada a verificação `scripts/check_lfs_images.py` à integração contínua. A presença de ponteiros não substitui a conferência do conteúdo armazenado no serviço LFS.
+
+### Verificação binária remota concluída
+
+A execução [GitHub Actions #42733590286](https://github.com/Felipe-SoaresB/leaf-area-image-dataset/actions/runs/42733590286) terminou com **sucesso**, incluindo o download via `actions/checkout` com `lfs: true` e a validação de todos os 205 JPEGs reais por SHA-256, formato, resolução e ausência de EXIF. A verificação ocorreu na branch `main` em 09/11/2026 (horário local de Brasília). A coleção de imagens foi registrada como revisão **v1.0.2**, sem mudança dos metadados experimentais v1.0.0.
