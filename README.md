@@ -6,6 +6,8 @@ Conjunto de fotografias de folhas atribuídas à espécie *Tabebuia roseoalba* e
 
 **Autores:** Tatiane Morais Neves e Felipe Soares Barbosa (estudantes do IFMG Campus Bambuí).
 
+**Licença dos dados públicos:** [CC BY 4.0](LICENSE-DATA.md) — aplicável às 205 fotografias sem EXIF em `images/data/`, aos CSVs de `release/` e à documentação original indicada na licença. A licença dos scripts Python e dos workflows será definida separadamente.
+
 ## Conteúdo da versão 1.0.0
 
 | Elemento | Quantidade |
@@ -58,7 +60,7 @@ A verificação de estrutura roda automaticamente no GitHub Actions.
 
 ## Escopo e disponibilização
 
-A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório está **público no GitHub** e disponibiliza os 205 JPEGs via **Git LFS**, além das tabelas e da documentação. **Ainda não há release formal nem DOI registrado**, e as condições de licenciamento devem ser ratificadas pelos coautores antes da versão científica definitiva.
+A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório está **público no GitHub** e disponibiliza os 205 JPEGs via **Git LFS**, além das tabelas e da documentação. **Ainda não há release formal nem DOI registrado**. A disponibilização dos dados e imagens sob CC BY 4.0 foi autorizada conforme confirmação dos coautores comunicada pelo mantenedor; a comprovação escrita deve permanecer arquivada.
 
 Os estados de qualidade mantidos nos CSVs refletem a curadoria existente; não representam certificação visual individual das imagens. Para critérios de exclusão, decisões de associação e demais limites do conjunto, consulte [`docs/EXCLUSIONS_AND_LIMITATIONS.md`](docs/EXCLUSIONS_AND_LIMITATIONS.md). Não se deve interpretar registros de área zero como medições físicas nulas quando correspondem a ausência de referência.
 
