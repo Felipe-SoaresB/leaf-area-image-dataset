@@ -30,3 +30,9 @@ O script clona em diretório novo, rastreia `images/data/*.jpg` por Git LFS, con
 O snapshot `snapshot/v1.0.0` descreve a versão de **metadados** consolidada. Após inclusão efetiva e conferida das fotografias, registrar a entrega de imagens como nova versão, sem modificar os valores dos quatro CSVs nem substituir o snapshot anterior.
 
 Este documento não confirma que as imagens já estejam no GitHub; confira a pasta `images/data` e o histórico dos commits após o envio.
+
+## Resultado do envio — 09/11/2026
+
+O usuário informou que o comando de envio terminou com sucesso. Conferência no GitHub: **205 entradas `images/data/*.jpg`** na branch `main`, rastreadas por `.gitattributes` como Git LFS. O manifesto `checksums/SHA256_RELEASE_NO_EXIF.txt` tem os mesmos 205 nomes. Uma amostra distribuída de sete ponteiros LFS teve `oid sha256` coincidente com a versão sem EXIF registrada no manifesto.
+
+O passo seguinte é comprovar o **download dos objetos binários**, não apenas os ponteiros; para isso foi acrescentada a verificação `scripts/check_lfs_images.py` à integração contínua. A presença de ponteiros não substitui a conferência do conteúdo armazenado no serviço LFS.

@@ -44,18 +44,21 @@ As quatro tabelas de origem auditadas foram preservadas sem alteração em [`met
 
 ## Reprodutibilidade e integridade
 
-`checksums/SHA256_ORIGINALS.txt` registra os hashes binários dos 205 JPEGs de origem. A versão para distribuição das imagens deve utilizar **cópias sem EXIF/GPS**, com manifesto distinto. O script de verificação é:
+`checksums/SHA256_ORIGINALS.txt` registra os hashes dos JPEGs originais, enquanto [`checksums/SHA256_RELEASE_NO_EXIF.txt`](checksums/SHA256_RELEASE_NO_EXIF.txt) contém os hashes das **205 cópias sem EXIF** incluídas via Git LFS. Os dois manifestos não são intercambiáveis. O script de verificação é:
 
 ```bash
 python scripts/validate_dataset.py --metadata-dir metadata --output-dir resultado_metadata
 python scripts/check_release.py
+python scripts/check_lfs_images.py
 ```
+
+O terceiro comando requer os JPEGs completos, baixados por `git lfs pull`, e a dependência `Pillow` (`pip install -r requirements.txt`).
 
 A verificação de estrutura roda automaticamente no GitHub Actions.
 
 ## Escopo e disponibilização
 
-A **versão 1.0.0 congela os metadados e suas regras de seleção**. Os JPEGs **não estão hospedados neste repositório**, que permanece privado durante a preparação do depósito científico. O arquivo de imagens para distribuição e o DOI ainda não foram publicados.
+A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório permanece **privado**. O depósito científico público e o DOI ainda não foram realizados.
 
 Os estados de qualidade mantidos nos CSVs refletem a curadoria existente; não representam certificação visual individual das imagens. Para critérios de exclusão, decisões de associação e demais limites do conjunto, consulte [`docs/EXCLUSIONS_AND_LIMITATIONS.md`](docs/EXCLUSIONS_AND_LIMITATIONS.md). Não se deve interpretar registros de área zero como medições físicas nulas quando correspondem a ausência de referência.
 

@@ -24,5 +24,7 @@ Não há exigência adotada de revisar manualmente cada uma das 191 fotos para *
 ## Transferência das imagens para GitHub
 - [x] Verificar as 205 cópias de distribuição sem EXIF e os respectivos hashes SHA-256.
 - [x] Configurar Git LFS exclusivamente para `images/data/*.jpg`.
-- [ ] Enviar as 205 cópias SEM EXIF à branch `main` e confirmar as 205 entradas LFS.
-- [ ] Versionar a chegada das imagens em nova revisão após confirmação do push.
+- [x] Recebido envio informado pelo usuário; confirmadas as 205 entradas Git LFS em `images/data/` e o manifesto com 205 nomes.
+- [x] Sete ponteiros amostrais com SHA-256 coincidente com o manifesto de distribuição.
+- [ ] Validar por download no GitHub Actions os 205 objetos LFS (JPEG real, hash e ausência de EXIF).
+- [ ] Registrar a chegada das imagens em nova revisão após confirmação da integridade por download.
