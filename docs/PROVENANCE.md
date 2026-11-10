@@ -15,4 +15,4 @@ O experimento de origem foi descrito pelos coautores como DIC, com 546 mudas ini
 ## Congelamento v1.0.0
 Os quatro arquivos de `metadata/` permanecem idênticos aos blobs da importação auditada. `release/` contém apenas campos selecionados e renomeados dos dados existentes; não gera novos valores biológicos. `VERSION`, `CHANGELOG.md`, `CITATION.cff` e a branch de snapshot registram a versão sem sobrescrever os originais.
 
-Para um futuro depósito de JPEGs, usar as cópias preparadas sem EXIF/GPS com hash distinto, mantendo o acervo e seus hashes originais como evidência privada.
+As 205 cópias preparadas sem EXIF/GPS foram adicionadas via Git LFS à revisão v1.0.2. Elas possuem hashes diferentes dos originais, que devem continuar preservados na fonte. A validação automática dos 205 objetos LFS foi aprovada na execução [GitHub Actions #42733590286](https://github.com/Felipe-SoaresB/leaf-area-image-dataset/actions/runs/42733590286). O repositório está público; isso não equivale a DOI, licença ratificada ou histórico público sanitizado.
