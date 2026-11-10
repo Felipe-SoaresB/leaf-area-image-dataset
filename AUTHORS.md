@@ -5,6 +5,8 @@ Coautores do conjunto de dados:
 1. **Tatiane Morais Neves** — estudante, Instituto Federal de Minas Gerais (IFMG), Campus Bambuí.
 2. **Felipe Soares Barbosa** — estudante, Instituto Federal de Minas Gerais (IFMG), Campus Bambuí.
 
-A distribuição pública foi autorizada pelos dois coautores conforme informado durante a preparação do repositório. Deve-se arquivar confirmação escrita e verificar direitos sobre eventuais materiais de terceiros antes da publicação.
+A distribuição dos dados e das fotografias do conjunto público sob **CC BY 4.0** foi autorizada pelos dois coautores, conforme confirmação comunicada pelo mantenedor. O aviso de licença e seu escopo estão documentados em [`LICENSE-DATA.md`](LICENSE-DATA.md). Recomenda-se arquivar a confirmação escrita e verificar eventuais direitos de terceiros.
 
-Contribuições individuais, ordem de autoria definitiva, contato público, ORCID e licença são pontos para ratificação dos coautores na versão de lançamento.
+A licença CC BY 4.0 **não** cobre automaticamente os scripts Python nem os metadados históricos de curadoria.
+
+Contribuições individuais, ordem de autoria definitiva, contato público e ORCID continuam sujeitos à conferência pelos coautores na versão de lançamento.
