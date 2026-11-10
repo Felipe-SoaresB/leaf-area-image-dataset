@@ -1,5 +1,7 @@
 # Fotografias do dataset — Git LFS
 
+**Licença das 205 imagens preparadas para distribuição:** [CC BY 4.0](../LICENSE-DATA.md), com atribuição aos dois coautores.
+
 A pasta [data/](data/) contém **205 entradas de fotografia JPEG**, inseridas na branch `main` por Git LFS em 09/11/2026. Os JPEGs de distribuição foram preparados **sem EXIF/GPS**, enquanto os originais com EXIF permanecem no acervo de pesquisa.
 
 O Git versiona pequenos arquivos-ponteiro LFS que identificam o SHA-256 e o tamanho de cada JPEG real. **Um ponteiro de aproximadamente 132 bytes não é uma imagem.** O conteúdo binário precisa ser buscado no servidor Git LFS.
