@@ -41,7 +41,7 @@ Até a definição da licença, **repositório público não equivale a permiss�
 Nenhuma reescrita de histórico foi executada nesta atualização documental.
 
 ## 5. Identificadores de publicação — pendente, sem obrigação presumida
-- [ ] Confirmar se uma **GitHub Release** formal é necessária no barema de APC.
+- [x] Conferir texto do código 129 no barema de APC utilizado: **"Atividades de coleta e/ou análise de dados com geração de dataset de acesso público"**, unidade Dataset, quantidade mínima 1, nível 6. O item **não menciona explicitamente DOI ou GitHub Release**; a CAC pode solicitar comprovação complementar.
 - [ ] Após ratificar os direitos e verificar a distribuição pública, preparar release estável (tag única).
 - [ ] Avaliar depósito externo em repositório científico (ex.: Zenodo), sempre com licença/coautoria conferidas.
 - [ ] Obter DOI se apropriado e permitido; acrescentá-lo a `CITATION.cff` **somente quando existir**.
