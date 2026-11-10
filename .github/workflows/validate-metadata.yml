@@ -1,7 +1,7 @@
-name: Validar metadados do dataset
+name: Validar metadados e versão de distribuição
 on:
   push:
-    branches: [main]
+    branches: [main, 'snapshot/**']
   pull_request:
   workflow_dispatch:
 
@@ -9,23 +9,25 @@ permissions:
   contents: read
 
 jobs:
-  validate-metadata:
+  validate-dataset:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do dataset
         uses: actions/checkout@v4
-      - name: Instalar Python
+      - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validar os quatro CSVs
+      - name: Conferir tabelas originais
         run: python scripts/validate_dataset.py --metadata-dir metadata --output-dir validation_output
-      - name: Exibir resumo no GitHub Actions
+      - name: Conferir a distribuição v1.0.0
+        run: python scripts/check_release.py
+      - name: Resumo da auditoria
         if: always()
         shell: bash
         run: |
           if test -f validation_output/validation_report.md; then
             cat validation_output/validation_report.md >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "Relatório não foi gerado." >> "$GITHUB_STEP_SUMMARY"
+            echo "Relatório não disponível." >> "$GITHUB_STEP_SUMMARY"
           fi

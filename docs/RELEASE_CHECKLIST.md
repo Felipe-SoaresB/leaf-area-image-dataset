@@ -1,24 +1,22 @@
-# Lista de verificação para publicação científica
+# Estado da curadoria e preparação de publicação — v1.0.0
 
-- [x] Coautoria identificada: Tatiane Morais Neves e Felipe Soares Barbosa.
-- [x] Autorização de publicação informada por ambos.
-- [x] Repositório PRIVADO de preparação criado.
-- [x] Metadados e validador preparados e importados do projeto original.
-- [x] Identidade Git blob SHA dos quatro CSVs confirmada após importação (22/10/2026).
-- [x] Executar a verificação de metadados no GitHub Actions; concluída com sucesso. Os avisos de Coleto permanecem documentados.
-- [x] Recuperar e decodificar 205 JPEGs originais; calcular SHA-256 (22/10/2026).
-- [x] Calcular SHA-256 de todas as 66 duplas de fotos existentes no Drive: 66/66 idênticas (22/10/2026).
-- [x] Triagem automática preliminar de 205 JPEGs realizada (indicadores de nitidez, contraste e exposição).
-- [x] Risco EXIF identificado: 204 JPEGs contêm coordenadas GPS; 1 possui seção GPS sem coordenadas.
-- [x] Preparar 205 cópias locais sem EXIF, com hashes SHA-256 próprios e sem recompressão de imagem.
-- [x] Preparar interface e formulário para revisão humana de qualidade das 191 fotos pendentes.
-- [ ] Fechar protocolo de controle de qualidade das 191 fotos pendentes (integridade binária já aprovada).
-- [ ] Verificar EXIF, autoria, terceiros e detalhes pessoais antes do depósito.
-- [ ] Completar e verificar protocolo experimental e relação muda/folha/foto.
-- [ ] Ratificar unidades e divergências de transcrição com os coautores.
-- [ ] Definir licença apropriada para dados e código; não presumir licença.
-- [ ] Guardar confirmação escrita da autorização e créditos.
-- [ ] Sincronizar SHA256SUMS.txt e DUPLICATE_PAIR_SHA256.csv com o repositório (artefatos locais da auditoria disponíveis para download).
-- [ ] Revisar CITATION.cff, DOI, versões e depósito no Zenodo.
-- [ ] Conferir barema e critérios APC aplicáveis ao código 129.
-- [ ] Obter revisão final dos coautores antes de tornar público.
+## Versão de curadoria: concluída
+- [x] Autores e autorização pública declarados pelos dois coautores.
+- [x] Inventário dos arquivos e associação com ImageJ conferidos.
+- [x] Quatro CSVs preservados em `metadata/` com Git blob SHA idêntico à origem.
+- [x] 205 JPEGs canônicos e 66 duplicações confrontados por SHA-256.
+- [x] Seleção de 177 grupos e divisão experimental preservadas.
+- [x] Limites de referência e exclusões descritos sem alterar estados originais.
+- [x] Metadados transportáveis de distribuição derivados sem IDs do Drive.
+- [x] Versionamento e dicionário de dados definidos.
+- [x] Triagem automática registrada, sem alegar aprovação visual individual.
+
+## Disponibilização científica: etapa separada
+- [ ] Selecionar e ratificar licença de dados/imagens com ambos os coautores; definir licença do código.
+- [ ] Preparar e revisar o pacote efetivo dos 205 JPEGs **sem EXIF/GPS**, comparando hashes com o manifesto de distribuição.
+- [ ] Conferir informações visíveis nos pixels antes da divulgação.
+- [ ] Depositar os arquivos com DOI (por exemplo Zenodo) e atualizar a citação com identificadores reais.
+- [ ] Criar histórico público limpo, sem os IDs privados de Drive presentes no repositório de preparação.
+- [ ] Revisar os requisitos oficiais de APC e preparar documentação comprobatória, caso se deseje pontuação.
+
+Não há exigência adotada de revisar manualmente cada uma das 191 fotos para **congelar os dados na v1.0.0**. Caso uma revisão individual seja realizada posteriormente, ela deverá ser documentada como uma alteração versionada. Congelamento privado não equivale a publicação com DOI.

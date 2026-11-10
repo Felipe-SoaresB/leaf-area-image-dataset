@@ -1,10 +1,7 @@
-# Imagens: pendentes de validação e depósito
+# Fotografias associadas ao dataset v1.0.0
 
-Não inserir JPEGs reais neste repositório durante a fase de preparação. Existem 205 nomes de fotografia distintos e 271 objetos de origem (incluindo 66 duplas por nome).
-Separar uma foto original por nome, conferir decodificação, tamanhos, EXIF e hashes SHA-256 e somente então preparar um depósito versionado (ex.: Zenodo) junto com manifesto de integridade.
-Não confundir hash do arquivo original com hash de versão sanitizada para publicação.
+O conjunto de origem contém 205 JPEGs distintos, capturados em dezembro de 2025. A pasta do Google Drive possui mais 66 objetos com nomes repetidos que se mostraram idênticos por SHA-256.
 
+Os JPEGs canônicos **não são versionados no Git** devido ao tamanho e à presença de EXIF nos originais. Seus hashes constam em `../checksums/SHA256_ORIGINALS.txt`.
 
-## Auditoria binária concluída
-
-Os 205 JPEGs canônicos foram carregados, decodificados e tiveram SHA-256 calculados. Os 66 pares duplicados foram comparados e todos são idênticos. Os JPEGs **não** foram enviados ao GitHub; as decisões de publicação, saneamento de EXIF e eventual depósito no Zenodo continuam pendentes. Veja `reports/INTEGRITY_AUDIT_2026-10-22.md`.
+Para publicação, utilizar a cópia de distribuição preparada **sem EXIF/GPS** e seu manifesto de hashes próprio, não os originais. O depósito de imagens e o DOI não fazem parte do congelamento dos metadados da v1.0.0.

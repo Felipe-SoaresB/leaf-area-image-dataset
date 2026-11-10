@@ -1,19 +1,22 @@
 cff-version: 1.2.0
-message: "Use a versão publicada com DOI quando disponível. Esta citação é preliminar."
+message: "Cite os coautores e a versão utilizada. Acrescente o DOI após sua atribuição."
 type: dataset
-title: "Leaf Area Image Dataset"
+title: "Tabebuia roseoalba Leaf Area Image Dataset with ImageJ References"
+version: 1.0.0
 authors:
   - family-names: "Neves"
     given-names: "Tatiane Morais"
+    affiliation: "Instituto Federal de Minas Gerais (IFMG), Campus Bambuí"
   - family-names: "Barbosa"
     given-names: "Felipe Soares"
+    affiliation: "Instituto Federal de Minas Gerais (IFMG), Campus Bambuí"
 abstract: >-
-  Conjunto de fotografias foliares e metadados curados, com referência
-  de área proveniente de ImageJ, vinculados a experimento com
-  Tabebuia roseoalba no IFMG Campus Bambuí.
+  Curated leaf-image metadata for specimens identified by the authors
+  as Tabebuia roseoalba, associated with ImageJ leaf-area reference
+  measurements and group-separated development/test partitions.
 keywords:
   - leaf area
   - image dataset
   - Tabebuia roseoalba
   - ImageJ
-  - IFMG
+  - computer vision

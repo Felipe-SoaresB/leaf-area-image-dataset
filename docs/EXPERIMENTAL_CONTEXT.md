@@ -1,34 +1,16 @@
-# Contexto experimental e origem biológica
+# Contexto experimental documentado
 
-**Estado:** informações iniciais fornecidas por Tatiane Morais Neves, coautora, na preparação do dataset em 22/10/2026. A origem é uma declaração dos coautores; a documentação experimental primária, a confirmação taxonômica e a metodologia completa ainda serão confrontadas antes da publicação científica.
+As informações abaixo foram fornecidas por Tatiane Morais Neves, coautora do conjunto, durante sua organização.
 
-## Informações confirmadas por comunicação dos coautores
+| Elemento | Informação disponível |
+|---|---|
+| Espécie declarada | *Tabebuia roseoalba* |
+| Delineamento estatístico | DIC — Delineamento Inteiramente Casualizado |
+| Quantidade inicialmente plantada | 546 mudas |
+| Instituição | IFMG — Campus Bambuí |
 
-| Campo | Informação registrada | Proveniência |
-|---|---|---|
-| Planta estudada | *Tabebuia roseoalba* | Informação de Tatiane Morais Neves, retransmitida ao projeto |
-| Delineamento estatístico | DIC — Delineamento Inteiramente Casualizado | Informação de Tatiane Morais Neves; termo expandido/corrigido de 'inteiramente causalidade' para 'inteiramente casualizado' |
-| Número inicial de plantas/mudas plantadas | 546 | Informação de Tatiane Morais Neves |
+O DIC designa o **delineamento estatístico** de alocação casualizada e não permite inferir o espaçamento físico ou as quantidades por tratamento. Os CSVs registram códigos de substratos, percentuais de tratamento e repetições, mas a descrição completa de sua alocação experimental não faz parte deste recorte do dataset.
 
-## Interpretação metodológica e limites
+As 546 mudas são o total inicial informado no experimento de origem; não representam 546 folhas fotografadas ou 546 registros com ImageJ. A relação planta–folha–imagem não foi documentada nesta versão. A grafia taxonômica é mantida conforme a informação dos autores, sem declaração de confirmação botânica independente.
 
-- **DIC** se refere à distribuição casualizada das unidades experimentais entre tratamentos. A afirmação, isoladamente, **não informa** onde ou a que distâncias as 546 mudas foram plantadas, nem quantas unidades havia por tratamento.
-- As **546 plantas/mudas** representam o quantitativo **plantado inicialmente**. Não está estabelecido, com os documentos examinados, quantas sobreviveram, quantas tiveram folhas medidas e fotografadas ou como cada planta se relaciona com os `sample_group_id`.
-- As **205 fotografias distintas**, **181 grupos identificados** e **177 grupos quantitativamente elegíveis** descrevem o subconjunto digital e sua curadoria, não a população original de 546 plantas. Não dividir automaticamente uma contagem pela outra para obter taxas de amostragem ou mortalidade.
-- A grafia *Tabebuia roseoalba* é a fornecida pelos autores. Verificar identificação botânica, autoridade e eventual nomenclatura atualizada na documentação científica de origem antes da publicação, **sem substituir silenciosamente** o nome declarado.
-- Há códigos de substrato e percentuais de tratamento nos CSVs, mas sua correspondência completa com o plano experimental deve ser confirmada pelos coautores.
-
-## Informações a completar antes da publicação
-
-- [ ] Documento/protocolo original do experimento e confirmação da identificação botânica.
-- [ ] Quais foram os tratamentos e fatores, suas unidades e seus níveis (por exemplo, substratos e percentuais).
-- [ ] Unidade experimental do DIC: muda, recipiente, bandeja, parcela ou outra.
-- [ ] Número planejado e realizado de repetições por tratamento; como foram alocadas as 546 plantas.
-- [ ] Disposição física, espaçamento, recipientes e/ou bandejas, caso se deseje descrever o plantio.
-- [ ] Datas de semeadura/plantio, cultivo, coleta e captura das imagens; condições de aquisição.
-- [ ] Critérios de seleção das folhas e relação entre plantas, folhas, medições ImageJ e `sample_group_id`.
-- [ ] Quantidade final de plantas sobreviventes/avaliadas, somente se existir registro rastreável.
-
-## Relação com os arquivos de metadados
-
-A inclusão desses dados contextuais **não altera nenhum dos quatro CSVs originais**, não muda áreas de referência nem resolve exceções pré-existentes de mapeamento.
+Essa delimitação é intencional: a versão v1.0.0 descreve o **acervo fotográfico efetivamente documentado** e suas referências, sem inferir desfechos do plantio ou lacunas da experimentação.

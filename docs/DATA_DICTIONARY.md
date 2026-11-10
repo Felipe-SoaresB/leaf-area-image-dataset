@@ -1,21 +1,39 @@
-# Dicionário de dados (preliminar)
+# Dicionário de dados — v1.0.0
 
-## tabela_mestre_v1.csv
+## release/images_v1.csv — 205 linhas (uma por fotografia)
 
-Cada linha representa uma fotografia, inclusive retakes e exclusões. `image_id` identifica o registro de imagem; `filename` é o arquivo JPEG; `drive_id` é o ID do objeto de origem; `capture_date` e `capture_time` são a data/hora curadas; `sample_group_id` agrupa diferentes fotografias da mesma amostra/folha.
-`substrato_original` e `substrato_normalizado` são códigos do substrato; `percentual` é o nível registrado do tratamento; `bandeja_repeticao` identifica bandeja/repetição; `coleto` é uma medida/campo bruto com divergências de transcrição documentadas; `sheet_row` referencia a linha da planilha ImageJ.
-`area_referencia_cm2` representa a referência de área em cm²; `area_status` distingue `positive`, `zero`, `missing` e valor vazio; `mapping_status`, `mapping_confidence` e `mapping_notes` documentam o vínculo entre fotografia e planilha.
-`qc_status` indica o status da imagem, mas `pending` NÃO significa aprovação final da qualidade; `exclude_from_analysis` e `exclusion_reason` documentam exclusões.
+| Coluna | Definição |
+|---|---|
+| `image_id` | Identificador estável da fotografia |
+| `filename` | Nome do JPEG correspondente |
+| `capture_date`, `capture_time` | Data e hora declaradas da captura |
+| `sample_group_id` | Identificador da amostra/folha; pode ocorrer em múltiplas fotos (retakes); vazio em fotos documentais/inválidas |
+| `substrate_code` | Código normalizado do substrato conforme fonte |
+| `treatment_percent` | Percentual de tratamento conforme fonte |
+| `replicate_id` | Identificador de bandeja/repetição da fonte |
+| `imagej_sheet_row` | Linha de referência da planilha ImageJ original |
+| `imagej_area_cm2` | Área de referência em cm²; vazio/zero não significa necessariamente medição biológica nula |
+| `reference_status` | Situação de referência: positiva, zero, ausente ou vazio |
+| `mapping_status` | Situação de vinculação com a planilha na curadoria |
+| `qc_status_source` | Status histórico de curadoria; `pending` NÃO significa certificado de qualidade nem rejeição |
+| `include_for_area_evaluation` | `yes` ou `no`, copiado da decisão de inclusão para avaliação quantitativa |
 
-## imagens_drive.csv
+## release/area_groups_v1.csv — 177 linhas (uma por grupo de área utilizável)
 
-Uma linha por nome distinto: `filename`, `capture_date`, `capture_time`, `drive_file_count`, `canonical_drive_id`, `size_bytes`, `duplicate_suspected` e `all_drive_ids`. `size_bytes` não comprova identidade binária; são necessários hashes SHA-256.
+| Coluna | Definição |
+|---|---|
+| `sample_group_id` | Identificador da amostra/grupo |
+| `canonical_image_id`, `canonical_filename` | Fotografia canônica associada |
+| `substrate_code`, `treatment_percent` | Tratamento registrado |
+| `imagej_area_cm2` | Área positiva de referência em cm² do grupo |
+| `n_images` | Quantidade de fotos registradas para o grupo |
+| `extra_retake_images` | Capturas extras da mesma amostra |
+| `stratum` | Estrato derivado de substrato e tratamento |
+| `split` | `development` ou `final_test`, separados por grupo |
+| `selection_rule` | Regra documentada de seleção da captura canônica |
 
-## referencias_imagej.csv
+## Arquivos preservados em metadata/
 
-Uma linha por medição da planilha de origem: `sheet_row`, `substrato_original`, `substrato_normalizado`, `percentual`, `bandeja_repeticao`, `coleto`, `MF`, `MS`, `CRA`, `area`, `area_status`, `sample_key`. A área é tratada como referência em cm². As unidades de MF/MS/CRA devem ser confirmadas no protocolo original. Zeros associados a ausência de leitura não podem ser interpretados como área biológica zero.
+`tabela_mestre_v1.csv` é a fonte integral de 205 fotografias (contém IDs do Drive, notas de mapeamento e decisões de exclusão). `imagens_drive.csv` documenta arquivos físicos, IDs e duplicações. `referencias_imagej.csv` contém os 291 registros originais, incluindo valores não aproveitados em análise de imagens. `divisao_experimental_v1.csv` define os 177 grupos elegíveis e partições.
 
-## divisao_experimental_v1.csv
-
-Uma linha por grupo elegível: `sample_group_id`, `canonical_image_id`, `canonical_filename`, `substrato`, `percentual`, `area_referencia_cm2`, `n_images`, `extra_retake_images`, `stratum`, `split`, `selection_rule`.
-`split` vale `development` (44 grupos) ou `final_test` (133 grupos). Separação é por grupo, nunca por retake. `canonical_*` corresponde à primeira foto canônica do grupo.
+As variáveis auxiliares `coleto`, `MF`, `MS` e `CRA` têm registros de origem cuja definição/unidade completa não faz parte do escopo desta versão; por isso não foram adicionadas às tabelas portáteis de área foliar.

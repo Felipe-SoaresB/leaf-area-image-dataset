@@ -1,9 +1,9 @@
-# Manifestos de integridade
+# Integridade do conjunto de imagens
 
-`SHA256SUMS.txt` será criado a partir dos JPEGs reais por `scripts/validate_dataset.py --images-dir ... --write-checksums`. Ainda não existe manifesto verificado para as 205 fotos.
-Nenhum SHA-256 de JPEG deve ser fabricado a partir de nomes, IDs ou tamanhos registrados.
+- `SHA256_ORIGINALS.txt`: 205 hashes SHA-256 das fotografias JPEG canônicas na origem, auditados em 22/10/2026.
+- O pacote local de triagem contém `SHA256_RELEASE_NO_EXIF.txt`, com 205 hashes **distintos** para as cópias que tiveram EXIF removido. Esse manifesto deve acompanhar o futuro depósito das fotografias de distribuição.
+- Há também relatório de igualdade binária de 66 pares redundantes na origem, `reports/INTEGRITY_AUDIT_2026-10-22.md`.
 
+**Atenção:** o hash do JPEG original não coincide necessariamente com o hash do arquivo sanitizado. Devem ser conservados e identificados separadamente, sem misturar objetos de versões diferentes.
 
-## Auditoria de 22/10/2026
-
-Os 205 hashes SHA-256 dos arquivos canônicos já foram calculados; as 66 duplas foram confrontadas e são binariamente idênticas. O manifesto individual foi gerado como arquivo local `SHA256SUMS.txt`, com SHA-256 do próprio manifesto `030196dd02140167a45510be4ee32905261f164774ea8401f4b1cd53278570c6`. **O manifesto completo ainda precisa ser sincronizado para este repositório.** Consulte `reports/INTEGRITY_AUDIT_2026-10-22.md`.
+O SHA-256 do arquivo `SHA256_ORIGINALS.txt`, conforme auditoria de origem, é `030196dd02140167a45510be4ee32905261f164774ea8401f4b1cd53278570c6`.

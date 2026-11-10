@@ -1,95 +1,56 @@
-# Leaf Area Image Dataset — versão de preparação
+# Tabebuia roseoalba — Leaf Area Image Dataset
 
-**Status: repositório em preparação (PRIVATE STAGING). Este pacote não constitui uma publicação científica nem uma versão validada para distribuição.**
+**Dataset v1.0.0 · Curadoria consolidada**
 
-Dataset de fotografias de folhas, com medidas de referência provenientes de registros ImageJ e metadados para avaliação de métodos de estimativa de área foliar a partir de imagens. Desenvolvido no contexto acadêmico do **Instituto Federal de Minas Gerais (IFMG), Campus Bambuí**.
+Conjunto de fotografias de folhas atribuídas à espécie *Tabebuia roseoalba* e metadados de áreas foliares de referência obtidas por ImageJ. O material foi organizado para permitir estudos de **estimativa de área foliar a partir de imagens**, documentação e comparação de métodos computacionais. Origem acadêmica: **Instituto Federal de Minas Gerais (IFMG), Campus Bambuí**.
 
-## Autoria
+**Autores:** Tatiane Morais Neves e Felipe Soares Barbosa (estudantes do IFMG Campus Bambuí).
 
-- **Tatiane Morais Neves** — coautora, estudante do IFMG Campus Bambuí.
-- **Felipe Soares Barbosa** — coautor, estudante do IFMG Campus Bambuí.
+## Conteúdo da versão 1.0.0
 
-A autorização dos dois coautores para a publicação foi informada. Os termos de licenciamento e a autorização documental serão registrados antes da divulgação pública. Não há atribuição de funções específicas sem validação dos coautores.
+| Elemento | Quantidade |
+|---|---:|
+| Fotografias JPEG distintas | **205** |
+| Grupos de amostra identificados | **181** |
+| Grupos vinculados a área de referência utilizável | **177** |
+| Fotografias associadas a esses grupos | **191** |
+| Fotografias fora da avaliação quantitativa | **14** |
+| Registros da planilha ImageJ de origem | **291** |
+| Divisão de desenvolvimento | **44 grupos** |
+| Divisão de teste final | **133 grupos** |
 
-## Contexto experimental — informações fornecidas pelos coautores
+As contagens de fotografias e de grupos de amostra são diferentes porque algumas folhas possuem múltiplas capturas (`retakes`). Os arquivos foram verificados quanto a integridade binária e as 66 cópias com nomes repetidos encontradas na origem eram idênticas por SHA-256.
 
-Segundo informações fornecidas por Tatiane Morais Neves durante a preparação do dataset:
+## Contexto da aquisição
 
-- **Espécie declarada:** *Tabebuia roseoalba* (grafia informada; identificação taxonômica ainda não verificada independentemente).
-- **Delineamento experimental declarado:** DIC — **Delineamento Inteiramente Casualizado**.
-- **Plantio inicial declarado:** **546 plantas/mudas plantadas** no início do experimento.
+Segundo a coautora que forneceu o contexto experimental, a espécie é *Tabebuia roseoalba*, o experimento utilizou **DIC (Delineamento Inteiramente Casualizado)** e teve **546 mudas inicialmente plantadas**. Esse número descreve o experimento de origem, não o número de folhas ou fotos deste conjunto. A relação individual entre cada muda e imagem não foi documentada nesta versão.
 
-Esses três dados descrevem o **experimento de origem**, e não a quantidade de fotografias ou amostras incluídas no dataset. O número de 546 plantas iniciais **não deve ser equiparado** às 205 imagens distintas, aos 181 grupos mapeados ou aos 177 grupos de avaliação quantitativa. Também **não é possível deduzir** dos dados recebidos o número de plantas sobreviventes, a quantidade de folhas por planta ou o esquema físico de plantio.
+## Como usar os dados
 
-Para distinguir **delineamento estatístico** de **disposição física das mudas**, faltam detalhes dos tratamentos, número de repetições, alocação, bandejas/parcelas, espaçamento, datas e condições de coleta. Ver [`docs/EXPERIMENTAL_CONTEXT.md`](docs/EXPERIMENTAL_CONTEXT.md).
+A pasta [`release/`](release/README.md) contém uma representação portátil dos metadados:
 
-## Estado atual dos dados (auditoria estrutural de 22/10/2026)
+- [`release/images_v1.csv`](release/images_v1.csv): uma linha por fotografia, com identificação, relação com a amostra, referência ImageJ quando existente e status original de inclusão;
+- [`release/area_groups_v1.csv`](release/area_groups_v1.csv): 177 grupos elegíveis para avaliação quantitativa, incluindo a divisão por grupo em desenvolvimento e teste.
 
-| Item | Contagem |
-| --- | ---: |
-| Fotografias distintas por nome (JPEG) | 205 |
-| Arquivos físicos na pasta de origem, incluindo cópias | 271 |
-| Nomes de fotografias duplicados | 66 |
-| Grupos de amostras identificados | 181 |
-| Grupos elegíveis para análise de área | 177 |
-| Imagens pertencentes a esses 177 grupos | 191 |
-| Registros brutos de área por ImageJ | 291 |
-| Grupos de desenvolvimento | 44 |
-| Grupos de teste final | 133 |
+Use o atributo `include_for_area_evaluation=yes` para selecionar as 191 fotografias associadas a referências de área elegíveis; para **avaliar modelos**, mantenha todas as capturas da mesma `sample_group_id` no mesmo conjunto e, quando necessário, use uma fotografia canônica por grupo para evitar pseudorreplicação.
 
-**Importante:** 205 imagens não equivalem a 205 amostras independentes; existem recapturas (`retakes`). Algumas imagens foram excluídas de comparação quantitativa. Os números são resultado de auditoria de metadados, **não** de novo cálculo SHA-256 das fotografias reais.
+As quatro tabelas de origem auditadas foram preservadas sem alteração em [`metadata/`](metadata/README.md). O dicionário e a rastreabilidade estão em [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) e [`docs/PROVENANCE.md`](docs/PROVENANCE.md).
 
-## Organização
+## Reprodutibilidade e integridade
 
-```text
-leaf-area-image-dataset/
-├── README.md
-├── AUTHORS.md
-├── CITATION.cff              # citação preliminar; sem DOI ainda
-├── .gitignore
-├── requirements.txt
-├── metadata/
-│   ├── README.md
-│   ├── tabela_mestre_v1.csv
-│   ├── imagens_drive.csv
-│   ├── referencias_imagej.csv
-│   └── divisao_experimental_v1.csv
-├── images/
-│   └── README.md             # fotografias não incluídas no Git
-├── scripts/
-│   └── validate_dataset.py
-├── docs/
-│   ├── DATA_DICTIONARY.md
-│   ├── EXPERIMENTAL_CONTEXT.md
-│   ├── PROVENANCE.md
-│   ├── EXCLUSIONS_AND_LIMITATIONS.md
-│   └── RELEASE_CHECKLIST.md
-├── checksums/
-│   └── README.md
-└── reports/
-    ├── README.md
-    └── AUDITORIA_PRELIMINAR_2026-10-22.md
-```
-
-## Como verificar
-
-**Metadados somente:** instalar as dependências e executar:
+`checksums/SHA256_ORIGINALS.txt` registra os hashes binários dos 205 JPEGs de origem. A versão para distribuição das imagens deve utilizar **cópias sem EXIF/GPS**, com manifesto distinto. O script de verificação é:
 
 ```bash
-python -m pip install -r requirements.txt
 python scripts/validate_dataset.py --metadata-dir metadata --output-dir resultado_metadata
+python scripts/check_release.py
 ```
 
-**Metadados e JPEGs:** com uma pasta local `C:/dataset/images` contendo *uma cópia original por nome*, executar:
+A verificação de estrutura roda automaticamente no GitHub Actions.
 
-```powershell
-python scripts/validate_dataset.py --metadata-dir metadata --images-dir "C:\dataset\images" --output-dir resultado_com_imagens --write-checksums
-```
+## Escopo e disponibilização
 
-O programa apenas lê entradas e grava relatórios na pasta de saída. O repositório de preparação inclui cópias dos quatro CSVs de curadoria, provenientes do repositório privado do projeto de PDI; não inclui as fotografias JPEG. A importação dos CSVs deve ser conferida pelos respectivos Git blob SHAs.
+A **versão 1.0.0 congela os metadados e suas regras de seleção**. Os JPEGs **não estão hospedados neste repositório**, que permanece privado durante a preparação do depósito científico. O arquivo de imagens para distribuição e o DOI ainda não foram publicados.
 
-## Política de publicação futura
+Os estados de qualidade mantidos nos CSVs refletem a curadoria existente; não representam certificação visual individual das imagens. Para critérios de exclusão, decisões de associação e demais limites do conjunto, consulte [`docs/EXCLUSIONS_AND_LIMITATIONS.md`](docs/EXCLUSIONS_AND_LIMITATIONS.md). Não se deve interpretar registros de área zero como medições físicas nulas quando correspondem a ausência de referência.
 
-Antes de abrir o repositório, precisamos concluir SHA-256 dos JPEGs, examinar EXIF e informações de terceiros, documentar qualidade e exclusões, aprovar licença(s) de dados/código, registrar autorização e alinhar o arquivo científico (por exemplo, no Zenodo). **Não considerar este repositório uma versão pública ou um DOI registrado.**
-
-Veja `docs/RELEASE_CHECKLIST.md`.
+**Citação:** arquivo [`CITATION.cff`](CITATION.cff). O DOI será acrescentado somente quando existir.
