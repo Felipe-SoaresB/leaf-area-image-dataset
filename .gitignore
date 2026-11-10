@@ -1,4 +1,4 @@
-# Fotografias ficarão fora do Git enquanto o depósito científico não estiver preparado.
+# Não registrar JPEGs brutos por acidente. Liberar somente cópias sanitizadas na pasta dedicada.
 *.jpg
 *.jpeg
 *.JPG
@@ -21,3 +21,6 @@ Thumbs.db
 /resultado/
 /resultado_metadata/
 /resultado_com_imagens/
+
+# Fotografias SEM EXIF gerenciadas por Git LFS
+!images/data/*.jpg

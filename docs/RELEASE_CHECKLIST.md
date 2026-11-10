@@ -20,3 +20,9 @@
 - [ ] Revisar os requisitos oficiais de APC e preparar documentação comprobatória, caso se deseje pontuação.
 
 Não há exigência adotada de revisar manualmente cada uma das 191 fotos para **congelar os dados na v1.0.0**. Caso uma revisão individual seja realizada posteriormente, ela deverá ser documentada como uma alteração versionada. Congelamento privado não equivale a publicação com DOI.
+
+## Transferência das imagens para GitHub
+- [x] Verificar as 205 cópias de distribuição sem EXIF e os respectivos hashes SHA-256.
+- [x] Configurar Git LFS exclusivamente para `images/data/*.jpg`.
+- [ ] Enviar as 205 cópias SEM EXIF à branch `main` e confirmar as 205 entradas LFS.
+- [ ] Versionar a chegada das imagens em nova revisão após confirmação do push.
