@@ -1,4 +1,4 @@
-# Incluir imagens no repositório privado por Git LFS
+# Registro do envio das imagens ao repositório público por Git LFS
 
 A coleção contém **205 JPEGs originais distintos** (aproximadamente 552 MiB). As 66 duplicações por nome no Drive não são novas imagens, e as cópias desse par foram confrontadas por SHA-256.
 
@@ -29,7 +29,7 @@ O script clona em diretório novo, rastreia `images/data/*.jpg` por Git LFS, con
 
 O snapshot `snapshot/v1.0.0` descreve a versão de **metadados** consolidada. Após inclusão efetiva e conferida das fotografias, registrar a entrega de imagens como nova versão, sem modificar os valores dos quatro CSVs nem substituir o snapshot anterior.
 
-Este documento não confirma que as imagens já estejam no GitHub; confira a pasta `images/data` e o histórico dos commits após o envio.
+Esta seção registra o procedimento originalmente usado; o envio foi concluído e verificado conforme os registros abaixo. Para uso atual, o repositório está público no GitHub.
 
 ## Resultado do envio — 09/11/2026
 
