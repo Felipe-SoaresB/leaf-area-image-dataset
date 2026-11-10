@@ -9,4 +9,4 @@ Cópias sem modificação dos quatro CSVs curados no repositório privado `Felip
 | referencias_imagej.csv | 291 | `7d4bbaa91752227e48a5fc96999265f7502f4fa4` |
 | divisao_experimental_v1.csv | 177 | `28cb89752a80b2c22cd9e1860e18fac4560b1191` |
 
-Esses arquivos preservam os IDs internos do Drive e notas de mapeamento para rastreabilidade. São dados da **curadoria privada** e não devem integrar um depósito público integralmente. Para divulgação e uso computacional, empregar a projeção de campos de `../release/` com histórico limpo. Não alterar estes registros sem rastrear uma nova versão.
+**Aviso de privacidade e proveniência (09/11/2026):** estes quatro arquivos preservam os IDs internos do Drive e notas de mapeamento. Embora tenham origem na curadoria privada, **estão atualmente presentes neste repositório público**. Eles não são a distribuição recomendada: para uso científico, prefira os CSVs reduzidos de `../release/`. Há uma pendência real de sanitização destes dados e do histórico Git; removê-los em um commit futuro não apaga as versões anteriores. A correção deve ser planejada sem modificar as referências ImageJ, os vínculos e as 205 imagens LFS.
