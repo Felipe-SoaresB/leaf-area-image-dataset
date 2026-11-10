@@ -24,12 +24,14 @@
 - [ ] Confirmar visualmente que rótulos e informações presentes **nos pixels** são adequados à divulgação; remoção de EXIF não remove texto fotografado.
 
 ## 3. Direitos e licença — pendente
-- [ ] Arquivar anuência escrita dos dois coautores para distribuição pública do conjunto de dados.
+- [x] Autorização para CC BY 4.0 dos coautores informada pelo mantenedor.
+- [ ] Arquivar comprovante escrito dessa autorização, caso ainda não esteja documentado.
 - [ ] Ratificar titularidade, créditos, ordem de autoria e eventuais direitos de terceiros.
-- [ ] Definir com os coautores uma licença específica para fotografias/dados e, separadamente, para código de validação.
-- [ ] Acrescentar o arquivo de licença adequado **somente após** a autorização correspondente.
+- [x] Licença CC BY 4.0 documentada em `LICENSE-DATA.md` para fotografias, CSVs públicos e documentação original.
+- [ ] Definir licença separada para os scripts Python e workflows, após confirmar a titularidade.
+- [x] Acrescentar o arquivo de licença dos dados após confirmação de autorização dos dois coautores.
 
-Até a definição da licença, **repositório público não equivale a permissão irrestrita de reutilização**.
+O material explicitamente coberto por `LICENSE-DATA.md` pode ser reutilizado conforme CC BY 4.0; **não** estender essa licença automaticamente aos códigos ou metadados históricos.
 
 ## 4. Metadados históricos públicos — pendência prioritária
 - [ ] A pasta pública `metadata/` inclui registros históricos com IDs internos de arquivos Google Drive e notas de curadoria.
