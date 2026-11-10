@@ -23,6 +23,6 @@ A chave da fotografia é `image_id`, e `filename` referencia a imagem JPEG. `sam
 
 ## Integridade, privacidade e contexto
 
-A distribuição elimina IDs privados do Drive e notas livres de curadoria; os originais permanecem restritos no repositório de preparação. **Não** tornar a totalidade do repositório privado atual pública: arquivos sensíveis constam do histórico Git. Para publicação, iniciar um depósito com histórico limpo contendo apenas os arquivos desta pasta, documentação selecionada, licença aprovada e JPEGs sem EXIF/GPS.
+Estes **dois CSVs de distribuição** eliminam IDs internos do Drive e notas livres de curadoria. **Atenção:** a pasta `../metadata/` já está presente no repositório público e ainda contém IDs internos de Drive e anotações históricas; o histórico Git também requer avaliação de sanitização. Isso não é corrigido apenas editando esta documentação. Para uma publicação científica arquivada/DOI, preparar um pacote limpo com estes CSVs, documentação revisada, licença aprovada e os JPEGs já preparados sem EXIF/GPS.
 
-As imagens ainda não integram este repositório. A versão v1.0.0 é o congelamento dos dados e dos vínculos; disponibilização pública e DOI serão registrados em ato próprio.
+As **205 imagens JPEG sem EXIF** estão em `../images/data/` via Git LFS. A versão v1.0.0 é o congelamento dos dados e dos vínculos, enquanto a revisão v1.0.2 registrou a inclusão das imagens. O repositório está público no GitHub, mas **não existe DOI nem release formal**, e a publicação definitiva depende das pendências indicadas em `../docs/RELEASE_CHECKLIST.md`.
