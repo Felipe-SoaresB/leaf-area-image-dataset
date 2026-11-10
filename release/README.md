@@ -1,6 +1,6 @@
 # Dados de distribuição — curadoria v1.0.0, documentação v1.0.1
 
-Esta pasta reúne o **núcleo portátil do dataset** para análise de área foliar. São derivados conservadores dos quatro CSVs-fonte mantidos em `../metadata/`: nenhuma medição foi recalculada e nenhuma fotografia foi reclassificada.
+Esta pasta reúne o **núcleo portátil do dataset** para análise de área foliar. **Licença:** [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](../LICENSE-DATA.md), com citação dos coautores e indicação de alterações. São derivados conservadores dos quatro CSVs-fonte mantidos em `../metadata/`: nenhuma medição foi recalculada e nenhuma fotografia foi reclassificada.
 
 | Arquivo | Linhas | Unidade |
 |---|---:|---|
