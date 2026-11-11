@@ -1,7 +1,7 @@
 # Plano de saneamento seguro de GitHub e Git LFS
 
 ## Situação verificada
-A branch pública `main` no início desta auditoria continha os sete JPEGs sob `images/data/` como ponteiros LFS de 132 bytes e as fotos binárias estavam acessíveis no LFS. Os hashes SHA-256 dos sete arquivos sanitizados foram registrados privadamente. A edição local corrigida remove os JPEGs e linhas correspondentes dos índices/checksums correntes, mas a exclusão em um commit novo não elimina cópias históricas.
+A branch pública `main` no início desta auditoria continha os sete JPEGs sob `images/data/` como ponteiros LFS de 132 bytes e as fotos binárias estavam acessíveis no LFS. Os hashes SHA-256 dos sete arquivos sanitizados foram registrados privadamente. A correção foi enviada para revisão na branch pública `privacy/corrected-public-v1.0.3` (commit `66407bd`), mas `main` não foi alterada; a exclusão em um commit novo não elimina cópias históricas.
 
 Os refs vistos na auditoria remota anterior incluem `main`, `images-staging`, `snapshot/v1.0.0` e `snapshot/v1.0.1`; devem ser rechecados antes de qualquer saneamento. Esta cópia foi clonada apenas com `main`, logo não foi usada para afirmar limpeza integral dos demais refs. Nenhum tag/ref foi removido.
 

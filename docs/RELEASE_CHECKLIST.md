@@ -19,7 +19,7 @@
 - [ ] Não clicar em Publish sem autorização expressa e revisão do usuário.
 
 ## GitHub e objetos históricos
-- [x] Commit seguro de correção sem reescrita de histórico preparado em branch local.
+- [x] Correção segura publicada para revisão em `privacy/corrected-public-v1.0.3` (commit `66407bd`); `main` não foi alterada.
 - [ ] Revisar e integrar correção ao `main` por fluxo normal, depois de revisão humana.
 - [ ] Abrir solicitação ao GitHub Support para indisponibilizar os objetos LFS e caches comprometidos; não remover refs/tags nem reescrever histórico sem autorização expressa.
 - [ ] Auditar todas as branches, tags, PR refs, releases, Actions artifacts e clones públicos após a resposta do GitHub.
