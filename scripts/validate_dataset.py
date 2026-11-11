@@ -35,9 +35,9 @@ REQUIRED = {
     "split": {"sample_group_id", "canonical_image_id", "canonical_filename",
               "area_referencia_cm2", "n_images", "extra_retake_images", "stratum", "split"},
 }
-PROFILE = {"master": 205, "images": 205, "imagej": 291, "split": 177,
+PROFILE = {"master": 198, "images": 198, "imagej": 291, "split": 177,
            "groups": 181, "eligible": 177, "positive_imagej": 245, "zero_imagej": 45,
-           "text_imagej": 1, "source_files": 271, "duplicate_names": 66,
+           "text_imagej": 1, "source_files": 264, "duplicate_names": 66,
            "development": 44, "final_test": 133}
 
 
@@ -402,7 +402,7 @@ def write_reports(audit: Audit, output_dir: Path) -> tuple[Path, Path]:
 def main() -> int:
     p = argparse.ArgumentParser(description="Validação do dataset científico de área foliar, sem alterar fontes")
     p.add_argument("--metadata-dir", type=Path, required=True, help="Pasta com os quatro arquivos CSV originais")
-    p.add_argument("--images-dir", type=Path, help="Pasta com os 205 JPEGs canônicos, sem duplicações")
+    p.add_argument("--images-dir", type=Path, help="Pasta com os 198 JPEGs da edição pública corrigida")
     p.add_argument("--output-dir", type=Path, default=Path("validation_output"))
     p.add_argument("--check-checksums", type=Path, help="Manifesto SHA256SUMS.txt previamente publicado")
     p.add_argument("--write-checksums", action="store_true", help="Gera SHA256SUMS.txt no diretório de saída")

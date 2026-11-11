@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## v1.0.3 — edição pública corrigida, preparada em 11/11/2026
+
+- Preparada distribuição de 198 JPEGs após retirar sete fotografias documentais sem comprovação de autorização para redistribuição.
+- Mantidos 181 grupos, 177 grupos ImageJ elegíveis, 191 fotografias quantitativamente elegíveis e divisão de 44/133 grupos; nenhuma área ou tratamento foi alterado.
+- Atualizados índices públicos, hashes, verificadores e documentação para distinguir a coleção histórica de 205 imagens desta edição corrigida.
+- ZIPs de revisão preparados localmente. O Zenodo continua em Draft e os arquivos não foram substituídos.
+- O commit não reescreve o histórico: objetos antigos Git/LFS podem permanecer acessíveis até saneamento coordenado com o GitHub.
+
 ## v1.0.2 — 09/11/2026 (imagens no Git LFS)
 
 - Adicionadas **205 fotografias JPEG sem EXIF/GPS** à pasta `images/data/` usando Git LFS.
@@ -7,7 +15,7 @@
 - O GitHub Actions baixou **os 205 objetos LFS completos**, verificou os hashes SHA-256, formato JPEG RGB, resolução, ausência de EXIF e concordância com o índice; execução aprovada.
 - Atualizados README, instruções de download e checklist de publicação.
 - Sem alteração das medições ImageJ, dos quatro CSVs originais, das divisões experimentais ou dos critérios de inclusão.
-- O repositório permanece **privado**, sem DOI, enquanto a publicação científica externa e a licença são definidas.
+- O DOI ainda não existia naquele registro. A frase original que indicava repositório privado era incorreta: o repositório `main` estava público. A edição corrigida v1.0.3 documenta a exposição histórica e sua pendência de saneamento.
 
 
 ## v1.0.1 — 09/11/2026 (documentação)

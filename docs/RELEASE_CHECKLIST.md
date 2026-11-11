@@ -1,66 +1,34 @@
-# Estado de publicação e auditoria do dataset — 09/11/2026
+# Checklist de publicação — edição pública corrigida v1.0.3
 
-**Projeto:** Tabebuia roseoalba — Leaf Area Image Dataset  
-**Repositório:** https://github.com/Felipe-SoaresB/leaf-area-image-dataset  
-**Situação:** disponível publicamente no GitHub; depósito científico com DOI ainda pendente.
+**Estado em 11/11/2026: PREPARADA LOCALMENTE, NÃO PRONTA PARA PUBLICAR.** Esta edição remove sete fotos documentais sem autorização comprovada. O GitHub continua tendo arquivos acessíveis em `main`, histórico/refs antigas e LFS, e o Zenodo Draft ainda mantém o ZIP histórico de 205 imagens.
 
-## 1. Preparação técnica — concluída
-- [x] Tabela mestre de curadoria v1.0.0 preservada.
-- [x] 205 fotografias distintas; 181 grupos; 177 grupos com referência ImageJ válida.
-- [x] Separação experimental de 44 grupos para desenvolvimento e 133 para teste.
-- [x] Retakes agrupados por `sample_group_id`.
-- [x] Duplicações da origem e hashes originais registrados.
-- [x] Cópias de distribuição JPEG preparadas sem EXIF/GPS.
-- [x] 205 imagens versionadas via Git LFS em `images/data/`; não remover os objetos LFS.
-- [x] Manifesto `checksums/SHA256_RELEASE_NO_EXIF.txt` com 205 registros.
-- [x] GitHub Actions verificou o download e a integridade dos 205 JPEGs (execução [#42733590286](https://github.com/Felipe-SoaresB/leaf-area-image-dataset/actions/runs/42733590286)).
-- [x] CSVs reduzidos de distribuição em `release/`, com 205 fotografias e 177 grupos.
-- [x] README, dicionário de dados, cartão do dataset, procedência e limitações disponíveis.
+## Dados e invariantes
+- [x] Sete registros históricos confirmados como `non_sample` e fora da avaliação (`include_for_area_evaluation=no`); cópias privadas locais mantidas separadamente.
+- [x] Edição pública de trabalho: 198 JPEGs, 181 grupos, 177 referências ImageJ válidas, 191 imagens elegíveis.
+- [x] Partição preservada: 44 grupos development / 133 final_test.
+- [x] Sete imagens retiradas das tabelas/índices/checksums ativos e do diretório LFS da edição corrigida.
+- [x] Áreas, tratamentos, grupos, referências elegíveis e split não recalculados.
+- [ ] Executar revisão independente dos direitos/licenças e conteúdo visual das 198 imagens remanescentes.
 
-## 2. Acesso público — concluído com ressalvas
-- [x] Repositório configurado como **público**.
-- [x] Entradas Git LFS presentes no ramo `main` e verificadas pela automação do GitHub.
-- [ ] Confirmar em uma sessão **sem login** o clone/download dos 205 arquivos reais e verificar eventuais limitações de banda LFS.
-- [ ] Confirmar visualmente que rótulos e informações presentes **nos pixels** são adequados à divulgação; remoção de EXIF não remove texto fotografado.
+## Integridade e depósito
+- [x] SHA-256 regenerado para os 198 JPEGs públicos.
+- [x] Plano de pacote e validação integral definidos; resultado detalhado em `reports/PRIVACY_CORRECTION_2026-11-11.md`.
+- [x] ZIPs corrigidos preparados localmente após verificação de extração.
+- [ ] Não substituir arquivos nem metadados do Zenodo Draft até autorização explícita.
+- [ ] Após autorização, atualizar os quatro artefatos do Draft e confirmar novamente o conteúdo antes de Publish.
+- [ ] Não clicar em Publish sem autorização expressa e revisão do usuário.
 
-## 3. Direitos e licença — pendente
-- [x] Autorização para CC BY 4.0 dos coautores informada pelo mantenedor.
-- [ ] Arquivar comprovante escrito dessa autorização, caso ainda não esteja documentado.
-- [ ] Ratificar titularidade, créditos, ordem de autoria e eventuais direitos de terceiros.
-- [x] Licença CC BY 4.0 documentada em `LICENSE-DATA.md` para fotografias, CSVs públicos e documentação original.
-- [ ] Definir licença separada para os scripts Python e workflows, após confirmar a titularidade.
-- [x] Acrescentar o arquivo de licença dos dados após confirmação de autorização dos dois coautores.
+## GitHub e objetos históricos
+- [x] Commit seguro de correção sem reescrita de histórico preparado em branch local.
+- [ ] Revisar e integrar correção ao `main` por fluxo normal, depois de revisão humana.
+- [ ] Abrir solicitação ao GitHub Support para indisponibilizar os objetos LFS e caches comprometidos; não remover refs/tags nem reescrever histórico sem autorização expressa.
+- [ ] Auditar todas as branches, tags, PR refs, releases, Actions artifacts e clones públicos após a resposta do GitHub.
+- [ ] Confirmar por URLs LFS antigas que os objetos não podem mais ser baixados.
 
-O material explicitamente coberto por `LICENSE-DATA.md` pode ser reutilizado conforme CC BY 4.0; **não** estender essa licença automaticamente aos códigos ou metadados históricos.
+## APC e documentação
+- [x] Ficha técnica APC atualizada como material comprobatório, não como garantia de pontuação.
+- [ ] Confirmar com a CAC qual regulamento vigente, evidências e formato de DOI/release são aceitos para o item 129.
+- [ ] Arquivar autorização escrita dos titulares para a edição exata de 198 imagens e os termos de licença.
 
-## 4. Metadados históricos públicos — pendência prioritária
-- [ ] A pasta pública `metadata/` inclui registros históricos com IDs internos de arquivos Google Drive e notas de curadoria.
-- [ ] Avaliar e preparar uma versão pública limitada aos campos pertinentes de `release/` e à documentação sem identificadores internos.
-- [ ] Se houver dados cuja divulgação não foi autorizada, planejar saneamento **do histórico Git**; apagar arquivos no commit atual não remove commits antigos.
-- [ ] Verificar impacto sobre scripts de validação, hashes e integridade antes de mudar/remover quaisquer CSVs.
-- [ ] Preservar as 205 imagens no Git LFS durante qualquer operação de limpeza do repositório.
-
-Nenhuma reescrita de histórico foi executada nesta atualização documental.
-
-## 5. Identificadores de publicação — pendente, sem obrigação presumida
-- [x] Conferir texto do código 129 no barema de APC utilizado: **"Atividades de coleta e/ou análise de dados com geração de dataset de acesso público"**, unidade Dataset, quantidade mínima 1, nível 6. O item **não menciona explicitamente DOI ou GitHub Release**; a CAC pode solicitar comprovação complementar.
-- [ ] Após ratificar os direitos e verificar a distribuição pública, preparar release estável (tag única).
-- [ ] Avaliar depósito externo em repositório científico (ex.: Zenodo), sempre com licença/coautoria conferidas.
-- [ ] Obter DOI se apropriado e permitido; acrescentá-lo a `CITATION.cff` **somente quando existir**.
-- [ ] Confirmar com a CAC quais documentos comprovam o código 129.
-
-**Distinção:** a string `v1.0.2` em `VERSION` e `CITATION.cff` não significa que já exista uma GitHub Release formal.
-
-## 6. Comprovação de APC — ainda não homologada
-Para eventual solicitação como dataset disponibilizado, reunir:
-1. URL pública do repositório, data de conferência e evidência de autoria/contribuição.
-2. README, cartão do dataset, dicionário e arquivos `release/`.
-3. Manifesto de SHA-256 e execução da validação automatizada.
-4. Comprovação de acesso às imagens e direitos de disponibilização.
-5. Tag/release e DOI, **se exigidos pelo barema**.
-6. Documentos e declaração solicitados pela CAC, conforme regulamento vigente.
-
-A pontuação deve ser definida com base no barema oficial e validada pela comissão. A presença de arquivos no GitHub, por si só, não garante deferimento.
-
-## 7. Escopo preservado
-As correções deste documento são editoriais e de status. Não modificam os dados científicos, o conjunto de imagens, os manifestos ou a metodologia já congelada.
+## Critério de liberação
+A publicação permanece bloqueada até: (1) saneamento ou confirmação de indisponibilidade dos arquivos históricos no GitHub; (2) atualização e conferência do Zenodo Draft; (3) comprovação de autorização para redistribuir todas as 198 imagens e documentação; (4) revisão final do usuário. Não há release formal nesta etapa.

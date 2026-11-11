@@ -1,42 +1,21 @@
-# Registro do envio das imagens ao repositório público por Git LFS
+# Registro histórico e instruções para a edição pública v1.0.3
 
-A coleção contém **205 JPEGs originais distintos** (aproximadamente 552 MiB). As 66 duplicações por nome no Drive não são novas imagens, e as cópias desse par foram confrontadas por SHA-256.
+Este documento substitui as instruções operacionais de envio da edição v1.0.2. As passagens históricas sobre 205 arquivos registram o que foi publicado em 09/11/2026, não o conteúdo público autorizado para a nova distribuição.
 
-Os **originais contêm EXIF/GPS**. Não adicioná-los ao GitHub em nenhuma branch, nem mesmo temporariamente, porque commits permanecem no histórico. Utilize apenas **cópias sem EXIF**.
+## Edição pública corrigida
 
-## Envio
+O estado de trabalho v1.0.3 contém 198 JPEGs sem EXIF/GPS. Sete fotografias documentais foram excluídas por falta de comprovação de autorização para redistribuição. A coleção de 205 imagens permanece como registro histórico; áreas, tratamentos, grupos e split (44/133) foram preservados. Consulte `docs/GITHUB_HISTORY_CLEANUP_PLAN.md`.
 
-O kit privado de preparação possui os seguintes arquivos:
-- `publicar_imagens_github.py`: lê a pasta local de originais, verifica os 205 SHA-256 originais, remove APP1/EXIF sem recomprimir, confere os hashes da versão sanitizada, clona o repositório e envia via Git LFS.
-- `SHA256_ORIGINAIS.txt` e `SHA256_SEM_EXIF.txt`: manifestos para validar cada imagem.
-- `LEIA-ME.md`: instruções para Windows.
-
-Depois de baixar e extrair a pasta de fotografias original do Drive, com **Python 3**, **Git** e **Git LFS** disponíveis, execute na pasta do kit:
+Os scripts para validação local são:
 
 ```powershell
-py -3 publicar_imagens_github.py --fotos "C:\\Users\\SEU_USUARIO\\Downloads\\Fotos"
+py -3 -m pip install -r requirements.txt
+py -3 scripts/check_release.py
+py -3 scripts/check_lfs_images.py
+py -3 scripts/build_zenodo_package.py --output-dir "D:\Projetos\leaf-area-zenodo-v1.0.3" --private-audit "$env:LOCALAPPDATA\LeafAreaPrivacyHold\2026-11-11\private_exclusion_audit.json" --baseline-commit d07f5d679c030035eea3b40c30f1eaf1e72b2d37
 ```
 
-Para apenas testar os 205 arquivos e a sanitização sem enviar nada:
+O último comando gera ZIPs e valida hashes, exclusões, equivalência científica do índice remanescente, 198 imagens, metadados e extração. O relatório é uma validação técnica, não prova de licença, consentimento, saneamento histórico nem publicação.
 
-```powershell
-py -3 publicar_imagens_github.py --fotos "C:\\Users\\SEU_USUARIO\\Downloads\\Fotos" --somente-verificar
-```
-
-O script clona em diretório novo, rastreia `images/data/*.jpg` por Git LFS, confere **205** entradas e faz push para a branch `main`. O arquivo `checksums/SHA256_RELEASE_NO_EXIF.txt` acompanha as imagens no mesmo commit. A conta GitHub deve estar autenticada.
-
-## Política de versionamento
-
-O snapshot `snapshot/v1.0.0` descreve a versão de **metadados** consolidada. Após inclusão efetiva e conferida das fotografias, registrar a entrega de imagens como nova versão, sem modificar os valores dos quatro CSVs nem substituir o snapshot anterior.
-
-Esta seção registra o procedimento originalmente usado; o envio foi concluído e verificado conforme os registros abaixo. Para uso atual, o repositório está público no GitHub.
-
-## Resultado do envio — 09/11/2026
-
-O usuário informou que o comando de envio terminou com sucesso. Conferência no GitHub: **205 entradas `images/data/*.jpg`** na branch `main`, rastreadas por `.gitattributes` como Git LFS. O manifesto `checksums/SHA256_RELEASE_NO_EXIF.txt` tem os mesmos 205 nomes. Uma amostra distribuída de sete ponteiros LFS teve `oid sha256` coincidente com a versão sem EXIF registrada no manifesto.
-
-O passo seguinte é comprovar o **download dos objetos binários**, não apenas os ponteiros; para isso foi acrescentada a verificação `scripts/check_lfs_images.py` à integração contínua. A presença de ponteiros não substitui a conferência do conteúdo armazenado no serviço LFS.
-
-### Verificação binária remota concluída
-
-A execução [GitHub Actions #42733590286](https://github.com/Felipe-SoaresB/leaf-area-image-dataset/actions/runs/42733590286) terminou com **sucesso**, incluindo o download via `actions/checkout` com `lfs: true` e a validação de todos os 205 JPEGs reais por SHA-256, formato, resolução e ausência de EXIF. A verificação ocorreu na branch `main` em 09/11/2026 (horário local de Brasília). A coleção de imagens foi registrada como revisão **v1.0.2**, sem mudança dos metadados experimentais v1.0.0.
+## Histórico v1.0.2
+O envio original ao Git LFS colocou 205 cópias JPEG sem EXIF/GPS em `main` e foi verificado pelo Actions run #42733590286. Essa referência é mantida para rastreabilidade. Os JPEGs retirados podem continuar recuperáveis em commits e objetos LFS antigos; a simples remoção do branch atual não purga esses objetos. O Zenodo fica em Draft até nova autorização. Não enviar, substituir, force-push, reescrever histórico ou publicar sem aprovação expressa.

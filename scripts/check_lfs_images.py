@@ -12,6 +12,7 @@ from pathlib import Path
 from PIL import Image, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parents[1]
+EXPECTED_IMAGES = 198
 IMAGE_DIR = ROOT / "images" / "data"
 MANIFEST = ROOT / "checksums" / "SHA256_RELEASE_NO_EXIF.txt"
 INDEX = ROOT / "release" / "images_v1.csv"
@@ -36,16 +37,16 @@ def main() -> None:
         assert filename not in manifest, f"Nome duplicado no manifesto: {filename}"
         assert "/" not in filename and chr(92) not in filename, f"Nome inseguro: {filename}"
         manifest[filename] = digest
-    assert len(manifest) == 205, f"Manifesto contém {len(manifest)} imagens, esperadas 205"
+    assert len(manifest) == EXPECTED_IMAGES, f"Manifesto contém {len(manifest)} imagens, esperadas {EXPECTED_IMAGES}"
 
     with INDEX.open("r", encoding="utf-8-sig", newline="") as f:
         idx = list(csv.DictReader(f))
     indexed = [r["filename"] for r in idx]
-    assert len(indexed) == 205 and set(indexed) == set(manifest), "Índice de imagens difere do manifesto"
+    assert len(indexed) == EXPECTED_IMAGES and set(indexed) == set(manifest), "Índice de imagens difere do manifesto"
 
     jpeg_files = list(IMAGE_DIR.glob("*.jpg"))
     available = {p.name for p in jpeg_files}
-    assert len(jpeg_files) == 205 and available == set(manifest), (
+    assert len(jpeg_files) == EXPECTED_IMAGES and available == set(manifest), (
         f"Imagens reais: {len(jpeg_files)}, ausentes: {sorted(set(manifest)-available)}, "
         f"extras: {sorted(available-set(manifest))}"
     )
@@ -68,9 +69,9 @@ def main() -> None:
                 image.verify()
         except (OSError, UnidentifiedImageError) as exc:
             raise AssertionError(f"{filename}: JPEG inválido: {exc}") from exc
-        if i % 50 == 0 or i == 205:
-            print(f"Verificados: {i}/205", flush=True)
-    print("PASS: 205 JPEGs reais, correspondentes aos metadados, SHA-256 correto e sem EXIF/GPS.")
+        if i % 50 == 0 or i == EXPECTED_IMAGES:
+            print(f"Verificados: {i}/{EXPECTED_IMAGES}", flush=True)
+    print("PASS: 198 JPEGs reais, correspondentes aos metadados, SHA-256 correto e sem EXIF/GPS.")
 
 
 if __name__ == "__main__":

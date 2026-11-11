@@ -1,36 +1,20 @@
-# Critérios de inclusão, exclusões e limites de interpretação — v1.0.0
+# Critérios de inclusão, exclusões e limites de interpretação
 
-## Unidade e seleção
-`image_id` identifica uma fotografia. `sample_group_id` identifica um grupo/folha associado a uma ou mais fotografias, inclusive retakes. A avaliação quantitativa foi estruturada pelos **177 grupos com referência de área utilizável**, totalizando 191 imagens.
+## Edição pública corrigida v1.0.3
+A edição pública contém 198 fotografias e 181 grupos mapeados. Os 177 grupos com referência de área utilizável correspondem a 191 fotografias quantitativamente elegíveis. A divisão experimental preserva 44 grupos em `development` e 133 em `final_test`.
 
-De 205 registros de imagem, **14 não pertencem ao conjunto quantitativo**:
-- 6 fotografias sem referência válida: grupo SG0002 (3 fotografias), SG0135, SG0168 e SG0175;
-- 7 fotografias documentais, sem unidade de área associada;
-- 1 fotografia considerada inválida por superexposição (`IMG_20251206_155837.jpg`).
+A edição histórica v1.0.2 continha 205 fotografias: 14 não integravam a avaliação quantitativa, entre elas sete fotos documentais sem unidade de área e uma captura inválida por superexposição. Na edição corrigida, as sete fotos documentais sem autorização comprovada foram removidas integralmente dos arquivos, índices e manifesto ativos. Restam sete JPEGs distribuídos fora da avaliação quantitativa: seis sem referência válida e uma captura inválida. A lista nominal das imagens retiradas está em um registro local privado, fora do repositório e do pacote público.
 
-SG0175 não foi associado à planilha de medição. Referências com zero que representam ausência de leitura **não** devem ser interpretadas como folha de área zero.
+As imagens retiradas eram classificadas no índice histórico como `non_sample` e `include_for_area_evaluation=no`. Elas não tinham grupo ou área associados. A remoção não altera as 191 observações elegíveis, as áreas, os tratamentos, os identificadores restantes nem o split 44/133.
+
+## Unidade e interpretação
+`image_id` identifica uma fotografia; `sample_group_id` identifica uma unidade amostral/folha, que pode ter retakes. Avaliações quantitativas devem usar os 177 grupos com referência utilizável e manter retakes do mesmo grupo na mesma partição. Referências zero ou ausentes podem representar falta de leitura, não área biológica nula.
 
 ## Integridade e qualidade
-A integridade binária foi verificada por SHA-256, inclusive 66 pares redundantes de arquivo. Houve triagem global exploratória de exposição, contraste e nitidez. Os 191 registros elegíveis conservam a marca histórica `qc_status=pending`, isto é, **não passaram por homologação visual individual registrada**. Isso não impede a disponibilização com descrição honesta do escopo, mas **não autoriza** afirmar que todas as imagens apresentam bordas nítidas, segmentação fácil ou calibração reavaliada.
+A integridade dos JPEGs é controlada por SHA-256. A triagem exploratória de nitidez, exposição e contraste não equivale à aprovação visual individual das imagens. Os status `pending` preservam o histórico de curadoria e não certificam cada pixel nem a referência ImageJ.
 
-## Referências e protocolo
-As áreas publicadas são referências transcritas da planilha ImageJ de origem, com associação documentada; não foram medidas novamente nesta versão. O protocolo completo de aquisição e calibração não foi fornecido nesta curadoria. Não extrapolar o dataset para representar todas as 546 mudas plantadas inicialmente.
+## Proveniência e limitações
+As áreas publicadas são transcritas de registros ImageJ, com associações documentadas, e não foram medidas novamente nesta edição. Há diferenças de transcrição no campo auxiliar `coleto`, excluído dos CSVs de distribuição. O protocolo completo de aquisição/calibração e a associação individual de cada muda às fotos não estão disponíveis. Não extrapolar resultados para todas as mudas do experimento ou condições não amostradas.
 
-## Divergências de transcrição (registro de rastreabilidade)
-O campo auxiliar `coleto` tem diferenças numéricas ou de formatação em relação à planilha de origem:
-
-| Grupo | Mestre | Referência ImageJ |
-|---|---|---|
-| SG0001 | 1.03 | 1.3 |
-| SG0002 | 1.50 | 1.47 |
-| SG0045 | 1.03 | 1.3 |
-| SG0063 | 2.15 | 2..15 |
-| SG0098 | 1.02 | 1.2 |
-| SG0102 | 1.09 | 1.9 |
-| SG0112 | 2.07 | 2.4 |
-| SG0157 | 1.09 | 1.9 |
-
-Esses valores não foram reproduzidos nos CSVs de distribuição do núcleo de área foliar. Os registros completos, justificativas e proveniência seguem preservados nos arquivos de origem.
-
-## Privacidade dos JPEGs
-Os JPEGs originais contêm EXIF, incluindo coordenadas GPS em 204 arquivos. Para depósito público, utilizar **cópias sem EXIF**, preservando os originais restritos e identificando hashes distintos. Verificar também informações manuscritas diretamente visíveis nos pixels quando a coleção for distribuída.
+## Privacidade e distribuição
+As cópias públicas foram preparadas sem EXIF/GPS; isso não remove texto ou pessoas visíveis nos pixels. A correção de v1.0.3 não apaga cópias existentes em histórico Git, refs, objetos Git LFS, caches ou no Zenodo Draft. A sanitização retroativa do GitHub exige plano próprio e, dependendo do histórico/armazenamento, suporte do GitHub. O Draft do Zenodo permanece sem alterações até autorização explícita.

@@ -13,6 +13,9 @@ As associações entre fotos e planilha ImageJ foram preservadas conforme `metad
 O experimento de origem foi descrito pelos coautores como DIC, com 546 mudas inicialmente plantadas de *Tabebuia roseoalba*. Não há mapeamento individual de planta para foto nesta versão.
 
 ## Congelamento v1.0.0
-Os quatro arquivos de `metadata/` permanecem idênticos aos blobs da importação auditada. `release/` contém apenas campos selecionados e renomeados dos dados existentes; não gera novos valores biológicos. `VERSION`, `CHANGELOG.md`, `CITATION.cff` e a branch de snapshot registram a versão sem sobrescrever os originais.
+Os quatro arquivos da importação v1.0.0 permanecem rastreáveis em commits históricos. Na edição pública corrigida, `tabela_mestre_v1.csv` e `imagens_drive.csv` foram filtrados para retirar os sete registros documentais; `release/` contém campos selecionados e renomeados dos dados existentes, sem gerar novos valores biológicos. A alteração dos CSVs correntes não apaga os blobs/commits históricos.
 
-As 205 cópias preparadas sem EXIF/GPS foram adicionadas via Git LFS à revisão v1.0.2. Elas possuem hashes diferentes dos originais, que devem continuar preservados na fonte. A validação automática dos 205 objetos LFS foi aprovada na execução [GitHub Actions #42733590286](https://github.com/Felipe-SoaresB/leaf-area-image-dataset/actions/runs/42733590286). O repositório está público; isso não equivale a DOI, licença ratificada ou histórico público sanitizado.
+## Edição pública corrigida v1.0.3 — 11/11/2026
+A distribuição histórica v1.0.2 teve 205 fotografias no Git LFS. A revisão pública corrigida remove sete fotos documentais sem autorização comprovada, deixando 198 JPEGs; os sete registros tinham status `non_sample` e não participavam da avaliação quantitativa. A remoção preserva dados dos 181 grupos, 177 referências válidas, 191 fotos elegíveis e divisão 44/133. O manifesto novo contempla somente os 198 JPEGs públicos.
+
+A validação do checkout local da edição preparada verifica os binários e metadados. Ela não purga commits, refs, objetos Git LFS nem caches históricos. O DOI reservado `10.5281/zenodo.24122476` continua em Draft; nenhum arquivo desse registro foi substituído. O conjunto público só deve ser declarado corrigido após a remoção efetiva dos objetos antigos ou confirmação do GitHub sobre sua indisponibilização.

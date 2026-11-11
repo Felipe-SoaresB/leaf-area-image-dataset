@@ -1,12 +1,14 @@
-# Metadados de origem preservados — congelamento v1.0.0
+# Arquivos de curadoria e metadados — edição pública corrigida v1.0.3
 
-Cópias sem modificação dos quatro CSVs curados no repositório privado `Felipe-SoaresB/trabalho-de-pdi-individual/data/metadata/`, capturadas em 22/10/2026.
+Esta pasta contém quatro tabelas de curadoria com campos técnicos e registros de referência. O histórico v1.0.0 foi capturado com 205 linhas de imagem; o estado público corrente foi atualizado para 198 linhas após retirar sete registros documentais sem autorização comprovada. O arquivo ImageJ e a divisão por grupos não foram alterados.
 
-| Arquivo | Registros | Git blob SHA |
+| Arquivo | Linhas atuais | Nota |
 |---|---:|---|
-| tabela_mestre_v1.csv | 205 | `b9e975cea11ea28be180630da892484ece8f2489` |
-| imagens_drive.csv | 205 | `097aa424c487a61f33b61ac8b05fb056f644359b` |
-| referencias_imagej.csv | 291 | `7d4bbaa91752227e48a5fc96999265f7502f4fa4` |
-| divisao_experimental_v1.csv | 177 | `28cb89752a80b2c22cd9e1860e18fac4560b1191` |
+| `tabela_mestre_v1.csv` | 198 | inclui campos de curadoria interna |
+| `imagens_drive.csv` | 198 | inclui IDs internos do Drive |
+| `referencias_imagej.csv` | 291 | referência histórica original |
+| `divisao_experimental_v1.csv` | 177 | partições preservadas |
 
-**Aviso de privacidade e proveniência (09/11/2026):** estes quatro arquivos preservam os IDs internos do Drive e notas de mapeamento. Embora tenham origem na curadoria privada, **estão atualmente presentes neste repositório público**. Eles não são a distribuição recomendada: para uso científico, prefira os CSVs reduzidos de `../release/`. Há uma pendência real de sanitização destes dados e do histórico Git; removê-los em um commit futuro não apaga as versões anteriores. A correção deve ser planejada sem modificar as referências ImageJ, os vínculos e as 205 imagens LFS.
+**Não use esta pasta como pacote de distribuição.** Ela ainda contém IDs internos do Google Drive e outras notas/campos de curadoria que não são necessários ao uso científico público. Para distribuição atual, utilize somente CSVs sanitizados em `../release/`, documentação pública selecionada e os JPEGs incluídos no manifesto corrigido. A remoção do conteúdo atual não apaga commits ou refs antigos; veja `../docs/GITHUB_HISTORY_CLEANUP_PLAN.md`.
+
+A lista nominal das sete fotografias documentais retiradas e seus hashes foi mantida fora deste repositório, em registro privado local, para não republicar seus nomes nos documentos da nova edição.

@@ -1,67 +1,40 @@
 # Tabebuia roseoalba — Leaf Area Image Dataset
 
-**Versão v1.0.2 · Metadados científicos consolidados em v1.0.0 · Fotografias disponíveis via Git LFS**
+**Edição pública corrigida, preparada como v1.0.3 (11/11/2026).** A coleção histórica v1.0.2 tinha 205 fotografias. Esta edição de distribuição contém **198 JPEGs**; sete fotografias documentais foram retiradas por privacidade. A curadoria e os resultados científicos das amostras elegíveis foram preservados.
 
-Conjunto de fotografias de folhas atribuídas à espécie *Tabebuia roseoalba* e metadados de áreas foliares de referência obtidas por ImageJ. O material foi organizado para permitir estudos de **estimativa de área foliar a partir de imagens**, documentação e comparação de métodos computacionais. Origem acadêmica: **Instituto Federal de Minas Gerais (IFMG), Campus Bambuí**.
+Conjunto de fotografias foliares atribuídas pelos autores a *Tabebuia roseoalba*, associadas, quando disponível, a áreas de referência ImageJ. Origem acadêmica: IFMG, Campus Bambuí. Autores: Tatiane Morais Neves e Felipe Soares Barbosa.
 
-**Autores:** Tatiane Morais Neves e Felipe Soares Barbosa (estudantes do IFMG Campus Bambuí).
-
-**Licença dos dados públicos:** [CC BY 4.0](LICENSE-DATA.md) — aplicável às 205 fotografias sem EXIF em `images/data/`, aos CSVs de `release/` e à documentação original indicada na licença. A licença dos scripts Python e dos workflows será definida separadamente.
-
-## Conteúdo da versão 1.0.0
+## Composição da edição pública corrigida
 
 | Elemento | Quantidade |
 |---|---:|
-| Fotografias JPEG distintas | **205** |
-| Grupos de amostra identificados | **181** |
-| Grupos vinculados a área de referência utilizável | **177** |
-| Fotografias associadas a esses grupos | **191** |
-| Fotografias fora da avaliação quantitativa | **14** |
-| Registros da planilha ImageJ de origem | **291** |
-| Divisão de desenvolvimento | **44 grupos** |
-| Divisão de teste final | **133 grupos** |
+| JPEGs públicos | **198** |
+| Grupos de amostra preservados | **181** |
+| Grupos com referência ImageJ positiva utilizável | **177** |
+| Fotografias elegíveis para análise quantitativa | **191** |
+| Fotografias públicas fora da avaliação quantitativa | **7** |
+| Divisão por grupo | **44 desenvolvimento / 133 teste final** |
 
-As contagens de fotografias e de grupos de amostra são diferentes porque algumas folhas possuem múltiplas capturas (`retakes`). Os arquivos foram verificados quanto a integridade binária e as 66 cópias com nomes repetidos encontradas na origem eram idênticas por SHA-256.
+A coleção histórica de 205 fotografias e a edição pública corrigida não são intercambiáveis. A diferença são sete imagens documentais sem autorização comprovada para redistribuição; elas não eram amostras, não pertenciam a grupos de folhas, estavam marcadas `non_sample` e `include_for_area_evaluation=no`. Sua retirada não altera áreas, tratamentos, identificadores restantes, referências ImageJ ou partições.
 
-## Contexto da aquisição
+## Uso e integridade
 
-Segundo a coautora que forneceu o contexto experimental, a espécie é *Tabebuia roseoalba*, o experimento utilizou **DIC (Delineamento Inteiramente Casualizado)** e teve **546 mudas inicialmente plantadas**. Esse número descreve o experimento de origem, não o número de folhas ou fotos deste conjunto. A relação individual entre cada muda e imagem não foi documentada nesta versão.
+`release/images_v1.csv` contém uma linha por JPEG público; `release/area_groups_v1.csv` contém os 177 grupos com referência válida. Use `include_for_area_evaluation=yes` para selecionar as 191 imagens elegíveis e mantenha retakes do mesmo grupo na mesma partição. A divisão 44/133 é por grupo.
 
-## Tratamentos e códigos
-
-Os substratos são **A = Areia**, **V = Vermiculita** e **T = Terra** (a variante minúscula `v` equivale a V). Os níveis **25%, 50%, 75% e 100%** correspondem a condições de irrigação relativas à **CRA — capacidade de retenção de água** do substrato. Os códigos descrevem o tratamento; não representam porcentagens de mistura dos substratos.
-
-O significado das siglas, os identificadores e os estados das tabelas está reunido em [**Códigos e abreviações**](docs/TREATMENT_CODES.md). Informações que não foram explicitadas nas planilhas originais permanecem assinaladas no dicionário, sem suposições.
-
-## Como usar os dados
-
-A pasta [`release/`](release/README.md) contém uma representação portátil dos metadados:
-
-- [`release/images_v1.csv`](release/images_v1.csv): uma linha por fotografia, com identificação, relação com a amostra, referência ImageJ quando existente e status original de inclusão;
-- [`release/area_groups_v1.csv`](release/area_groups_v1.csv): 177 grupos elegíveis para avaliação quantitativa, incluindo a divisão por grupo em desenvolvimento e teste.
-
-Use o atributo `include_for_area_evaluation=yes` para selecionar as 191 fotografias associadas a referências de área elegíveis; para **avaliar modelos**, mantenha todas as capturas da mesma `sample_group_id` no mesmo conjunto e, quando necessário, use uma fotografia canônica por grupo para evitar pseudorreplicação.
-
-As quatro tabelas de origem auditadas foram preservadas sem alteração em [`metadata/`](metadata/README.md), **mas essa pasta está atualmente acessível no repositório público e contém IDs internos do Google Drive e notas de curadoria**. Para consumo externo, prefira os CSVs sanitizados de [`release/`](release/README.md); a remoção adequada de identificadores do histórico Git ainda é uma pendência. O dicionário e a rastreabilidade estão em [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) e [`docs/PROVENANCE.md`](docs/PROVENANCE.md).
-
-## Reprodutibilidade e integridade
-
-`checksums/SHA256_ORIGINALS.txt` registra os hashes dos JPEGs originais, enquanto [`checksums/SHA256_RELEASE_NO_EXIF.txt`](checksums/SHA256_RELEASE_NO_EXIF.txt) contém os hashes das **205 cópias sem EXIF** incluídas via Git LFS. Os dois manifestos não são intercambiáveis. O script de verificação é:
+Os JPEGs em `images/data/` são disponibilizados por Git LFS. Execute `git lfs pull`. `checksums/SHA256_RELEASE_NO_EXIF.txt` registra apenas a edição pública atual. Os hashes dos JPEGs originais retidos na fonte são distintos dos hashes das cópias sem EXIF.
 
 ```bash
-python scripts/validate_dataset.py --metadata-dir metadata --output-dir resultado_metadata
+python -m pip install -r requirements.txt
 python scripts/check_release.py
 python scripts/check_lfs_images.py
 ```
 
-O terceiro comando requer os JPEGs completos, baixados por `git lfs pull`, e a dependência `Pillow` (`pip install -r requirements.txt`).
+A validação técnica de pixels e metadados não substitui autorização de direitos nem inspeção de conteúdo visível. O repositório e o Zenodo Draft ainda exigem saneamento de versões históricas; a correção deste commit não remove arquivos de commits anteriores nem objetos LFS antigos.
 
-A verificação de estrutura roda automaticamente no GitHub Actions.
+## Licença e publicação
 
-## Escopo e disponibilização
+A licença indicada para a edição pública é CC BY 4.0, sujeita à confirmação documental de direitos dos autores e de terceiros. O DOI reservado `10.5281/zenodo.24122476` corresponde a um depósito ainda em Draft; a edição v1.0.3 aqui preparada **não foi enviada nem publicada no Zenodo**. Consulte `docs/RELEASE_CHECKLIST.md` antes de tratar esta edição como liberada.
 
-A **versão 1.0.0 congela os metadados e suas regras de seleção**. As **205 imagens sem EXIF** foram adicionadas em [`images/data/`](images/data/) via **Git LFS**. Faça o clone com Git LFS instalado e execute `git lfs pull` para obter os JPEGs completos; arquivos de 132 bytes presentes apenas no Git são ponteiros LFS, não fotografias. O repositório está **público no GitHub** e disponibiliza os 205 JPEGs via **Git LFS**, além das tabelas e da documentação. **Ainda não há release formal nem DOI registrado**. A disponibilização dos dados e imagens sob CC BY 4.0 foi autorizada conforme confirmação dos coautores comunicada pelo mantenedor; a comprovação escrita deve permanecer arquivada.
+## Contexto
 
-Os estados de qualidade mantidos nos CSVs refletem a curadoria existente; não representam certificação visual individual das imagens. Para critérios de exclusão, decisões de associação e demais limites do conjunto, consulte [`docs/EXCLUSIONS_AND_LIMITATIONS.md`](docs/EXCLUSIONS_AND_LIMITATIONS.md). Não se deve interpretar registros de área zero como medições físicas nulas quando correspondem a ausência de referência.
-
-**Citação:** arquivo [`CITATION.cff`](CITATION.cff). O DOI será acrescentado somente quando existir. Consulte o [estado de publicação e as pendências](docs/RELEASE_CHECKLIST.md).
+Segundo informação dos autores, o experimento de origem usou delineamento inteiramente casualizado e inicialmente plantou 546 mudas. Esse número descreve o experimento de origem, não o número de folhas, grupos ou fotografias públicas. Os códigos de substrato e irrigação estão em `docs/TREATMENT_CODES.md`; não inferir relações individuais entre mudas e imagens que não estejam documentadas.

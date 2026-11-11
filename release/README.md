@@ -1,28 +1,14 @@
-# Dados de distribuição — curadoria v1.0.0, documentação v1.0.1
+# Índices de distribuição — edição pública corrigida v1.0.3
 
-Esta pasta reúne o **núcleo portátil do dataset** para análise de área foliar. **Licença:** [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](../LICENSE-DATA.md), com citação dos coautores e indicação de alterações. São derivados conservadores dos quatro CSVs-fonte mantidos em `../metadata/`: nenhuma medição foi recalculada e nenhuma fotografia foi reclassificada.
+Esta edição pública corrige a privacidade da distribuição histórica de imagens. A coleção histórica v1.0.2 tinha 205 JPEGs; a edição pública corrigida contém 198, após retirar sete fotografias documentais sem comprovação de autorização para redistribuição. As sete eram `non_sample`, não integravam grupos de folhas nem avaliação quantitativa. Áreas, tratamentos, identificadores restantes, dados ImageJ e partições não foram alterados.
 
-| Arquivo | Linhas | Unidade |
+| Arquivo | Registros | Unidade |
 |---|---:|---|
-| `images_v1.csv` | 205 | registro de fotografia |
-| `area_groups_v1.csv` | 177 | grupo/folha associado a uma referência positiva |
+| `images_v1.csv` | 198 | fotografia pública |
+| `area_groups_v1.csv` | 177 | grupo com referência positiva válida |
 
-## Legenda dos tratamentos
+O índice de imagens mantém os status originais para os 198 registros distribuídos. São 191 imagens elegíveis para análise e sete não elegíveis por outros critérios já existentes. Os 177 grupos válidos mantêm a divisão de 44 grupos de desenvolvimento e 133 de teste final.
 
-- `substrate_code`: A = **Areia**, V = **Vermiculita**, T = **Terra** (`v` original é normalizado como V).
-- `treatment_percent`: 25, 50, 75 ou 100% da **CRA (capacidade de retenção de água)** do substrato; não indica composição da mistura.
-- Consulte [`docs/TREATMENT_CODES.md`](../docs/TREATMENT_CODES.md) para siglas, estados e unidades conhecidas.
+`substrate_code` usa A = Areia, V = Vermiculita e T = Terra. `treatment_percent` representa nível relativo à capacidade de retenção de água do substrato. Consulte `docs/DATA_DICTIONARY.md` e `docs/TREATMENT_CODES.md`.
 
-## Vínculo e interpretação
-
-A chave da fotografia é `image_id`, e `filename` referencia a imagem JPEG. `sample_group_id` relaciona múltiplas fotos da mesma amostra. `imagej_area_cm2` representa a referência de área em centímetros quadrados quando disponível.
-
-`include_for_area_evaluation` indica seleção realizada a partir do campo original `exclude_from_analysis`, **não** uma conclusão de inspeção visual. `qc_status_source` conserva os estados `pending`, `reference_missing`, `non_sample` e `invalid_capture` da origem. Os casos excluídos permanecem no índice para rastreabilidade.
-
-`area_groups_v1.csv` contém exatamente os 177 grupos ligados a referência utilizável. A coluna `split` contém `development` ou `final_test`. Retakes devem permanecer juntos pelo `sample_group_id`; a captura canônica é indicada em `canonical_filename`.
-
-## Integridade, privacidade e contexto
-
-Estes **dois CSVs de distribuição** eliminam IDs internos do Drive e notas livres de curadoria. **Atenção:** a pasta `../metadata/` já está presente no repositório público e ainda contém IDs internos de Drive e anotações históricas; o histórico Git também requer avaliação de sanitização. Isso não é corrigido apenas editando esta documentação. Para uma publicação científica arquivada/DOI, preparar um pacote limpo com estes CSVs, documentação revisada, licença aprovada e os JPEGs já preparados sem EXIF/GPS.
-
-As **205 imagens JPEG sem EXIF** estão em `../images/data/` via Git LFS. A versão v1.0.0 é o congelamento dos dados e dos vínculos, enquanto a revisão v1.0.2 registrou a inclusão das imagens. O repositório está público no GitHub, mas **não existe DOI nem release formal**, e a publicação definitiva depende das pendências indicadas em `../docs/RELEASE_CHECKLIST.md`.
+Os CSVs não contêm nomes das imagens retiradas nem IDs de Drive. As fotografias públicas sem EXIF/GPS ficam em `images/data/` via Git LFS. O manifesto correspondente é `checksums/SHA256_RELEASE_NO_EXIF.txt`. A cópia de trabalho histórica do repositório, seus commits antigos e o depósito Zenodo em Draft ainda exigem saneamento independente; esta edição não os apaga retroativamente.

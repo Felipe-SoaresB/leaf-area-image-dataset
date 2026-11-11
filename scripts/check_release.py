@@ -15,10 +15,10 @@ groups = load(ROOT / "metadata" / "divisao_experimental_v1.csv")
 release_images = load(ROOT / "release" / "images_v1.csv")
 release_groups = load(ROOT / "release" / "area_groups_v1.csv")
 
-assert len(master) == len(release_images) == 205, "Contagem de imagens inesperada"
+assert len(master) == len(release_images) == 198, "A edição pública corrigida deve conter 198 imagens"
 assert len(groups) == len(release_groups) == 177, "Contagem de grupos inesperada"
-assert len({r["image_id"] for r in release_images}) == 205, "image_id duplicado"
-assert len({r["filename"] for r in release_images}) == 205, "filename duplicado"
+assert len({r["image_id"] for r in release_images}) == 198, "image_id duplicado"
+assert len({r["filename"] for r in release_images}) == 198, "filename duplicado"
 assert len({r["sample_group_id"] for r in release_groups}) == 177, "grupo duplicado"
 
 byid = {r["image_id"]: r for r in master}
@@ -42,7 +42,7 @@ for row in release_images:
         assert row[pub] == original[src], f"{row['image_id']}: diferença em {pub}"
     assert row["include_for_area_evaluation"] == ("yes" if original["exclude_from_analysis"] == "no" else "no"), f"{row['image_id']}: inclusão invertida"
 assert sum(r["include_for_area_evaluation"] == "yes" for r in release_images) == 191
-assert sum(r["include_for_area_evaluation"] == "no" for r in release_images) == 14
+assert sum(r["include_for_area_evaluation"] == "no" for r in release_images) == 7
 src_groups = {r["sample_group_id"]: r for r in groups}
 for r in release_groups:
     s = src_groups[r["sample_group_id"]]
@@ -69,4 +69,7 @@ assert sum(r["split"] == "final_test" for r in release_groups) == 133
 for path in (ROOT / "release" / "images_v1.csv", ROOT / "release" / "area_groups_v1.csv"):
     for blocked in ("drive_id", "canonical_drive_id", "all_drive_ids"):
         assert blocked not in path.read_text(encoding="utf-8-sig").lower(), f"ID de Drive em {path}"
-print("PASS: 205 imagens, 177 grupos, 191 imagens elegíveis, 44/133 grupos; projeção equivalente à origem.")
+assert len({r["sample_group_id"] for r in master if r["sample_group_id"]}) == 181
+assert sum(r["include_for_area_evaluation"] == "yes" for r in release_images) == 191
+assert len(release_groups) == 177
+print("PASS: edição pública corrigida: 198 imagens, 181 grupos mapeados, 177 grupos elegíveis, 191 imagens elegíveis, divisão 44/133.")

@@ -15,4 +15,4 @@ Manter os estados históricos do arquivo mestre sem converter `pending` em `appr
 Uma eventual revisão humana futura deve produzir registros de decisão e uma **nova versão** do conjunto, não modificar retroativamente os dados da v1.0.0.
 
 ## Proteção de dados nas imagens
-As 205 fotografias originais continham metadados EXIF; 204 incluíam coordenadas GPS. Criaram-se cópias de trabalho sem EXIF, não recompostas por compressão, com manifesto SHA-256 distinto. Qualquer depósito deve incluir somente versões de distribuição e conferir também informações visíveis no conteúdo fotografado.
+Na coleção histórica de 205 fotografias, os arquivos de origem continham metadados EXIF; 204 incluíam coordenadas GPS. Criaram-se cópias de distribuição sem EXIF, não recompostas por compressão, com manifesto SHA-256 distinto. A edição pública corrigida v1.0.3 distribui 198 fotos após remover sete imagens documentais sem autorização comprovada. Qualquer depósito deve usar somente o pacote corrigido e conferir também informações visíveis nos pixels.

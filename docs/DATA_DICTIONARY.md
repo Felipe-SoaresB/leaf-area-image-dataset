@@ -1,6 +1,6 @@
 # Dicionário de dados — documentação v1.0.1 (dados v1.0.0)
 
-## release/images_v1.csv — 205 linhas (uma por fotografia)
+## release/images_v1.csv — 198 linhas na edição pública corrigida v1.0.3 (uma por fotografia)
 
 | Coluna | Definição |
 |---|---|
@@ -32,8 +32,10 @@
 | `split` | `development` ou `final_test`, separados por grupo |
 | `selection_rule` | Regra documentada de seleção da captura canônica |
 
-## Arquivos preservados em metadata/
+## Coleção histórica e arquivos de curadoria
 
-`tabela_mestre_v1.csv` é a fonte integral de 205 fotografias (contém IDs do Drive, notas de mapeamento e decisões de exclusão). `imagens_drive.csv` documenta arquivos físicos, IDs e duplicações. `referencias_imagej.csv` contém os 291 registros originais, incluindo valores não aproveitados em análise de imagens. `divisao_experimental_v1.csv` define os 177 grupos elegíveis e partições.
+Os arquivos de origem da curadoria estão em `metadata/`. A coleção histórica possuía 205 fotos; a edição pública corrigida distribui 198, após excluir sete fotos documentais classificadas como `non_sample` sem autorização comprovada para redistribuição. Essas sete não faziam parte da análise quantitativa. A área pública de distribuição é representada pelos arquivos em `release/`; não reutilize contagens/hashes da edição histórica como se fossem desta edição.
+
+`tabela_mestre_v1.csv` e `imagens_drive.csv` refletem a edição corrente e não contêm as sete linhas removidas. `referencias_imagej.csv` conserva 291 registros da planilha de origem. `divisao_experimental_v1.csv` preserva os 177 grupos elegíveis e suas partições.
 
 O significado dos tratamentos, a normalização de `v` para `V`, os estados de curadoria e as abreviações estão reunidos em [`TREATMENT_CODES.md`](TREATMENT_CODES.md). As variáveis auxiliares `coleto`, `MF`, `MS` e `CRA` da planilha foliar não foram introduzidas nas tabelas portáteis; algumas ainda necessitam confirmação de expansão ou unidade. O `CRA` numérico da planilha foliar **não deve ser confundido** com o percentual de CRA usado na irrigação.
