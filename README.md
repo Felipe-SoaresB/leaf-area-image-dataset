@@ -1,6 +1,6 @@
 # Tabebuia roseoalba — Leaf Area Image Dataset
 
-**Edição pública corrigida, preparada como v1.0.3 (11/11/2026).** A coleção histórica v1.0.2 tinha 205 fotografias. Esta edição de distribuição contém **198 JPEGs**; sete fotografias documentais foram retiradas por privacidade. A curadoria e os resultados científicos das amostras elegíveis foram preservados.
+**Edição pública corrigida v1.0.3, publicada no Zenodo e disponível no GitHub (11/11/2026).** A coleção histórica v1.0.2 tinha 205 fotografias. Esta edição de distribuição contém **198 JPEGs**; sete fotografias documentais foram retiradas por privacidade. A curadoria e os resultados científicos das amostras elegíveis foram preservados.
 
 Conjunto de fotografias foliares atribuídas pelos autores a *Tabebuia roseoalba*, associadas, quando disponível, a áreas de referência ImageJ. Origem acadêmica: IFMG, Campus Bambuí. Autores: Tatiane Morais Neves e Felipe Soares Barbosa.
 
@@ -29,11 +29,13 @@ python scripts/check_release.py
 python scripts/check_lfs_images.py
 ```
 
-A validação técnica de pixels e metadados não substitui autorização de direitos nem inspeção de conteúdo visível. O repositório e o Zenodo Draft ainda exigem saneamento de versões históricas; a correção deste commit não remove arquivos de commits anteriores nem objetos LFS antigos.
+A validação técnica de pixels e metadados não substitui autorização de direitos nem inspeção de conteúdo visível. A edição pública v1.0.3 está disponível no GitHub e publicada no Zenodo. A correção não reescreve o histórico Git: versões anteriores e objetos Git LFS antigos ainda podem estar acessíveis e não fazem parte da edição atual.
 
 ## Licença e publicação
 
-A licença indicada para a edição pública é CC BY 4.0, sujeita à confirmação documental de direitos dos autores e de terceiros. O DOI reservado `10.5281/zenodo.24122476` corresponde a um depósito ainda em Draft; a edição v1.0.3 aqui preparada **não foi enviada nem publicada no Zenodo**. Consulte `docs/RELEASE_CHECKLIST.md` antes de tratar esta edição como liberada.
+A edição pública corrigida v1.0.3 (198 fotografias e os CSVs públicos) está licenciada sob [CC BY 4.0](LICENSE-DATA.md), conforme autorização dos coautores informada pelo mantenedor; recomenda-se arquivar a autorização por escrito. A licença não se estende automaticamente aos scripts, a materiais históricos ou a direitos de terceiros.
+
+**Publicação científica:** [Zenodo, versão 1.0.3 — DOI 10.5281/zenodo.24122476](https://doi.org/10.5281/zenodo.24122476). O DOI está publicado e é a referência persistente desta versão.
 
 ## Contexto
 
