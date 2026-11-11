@@ -13,7 +13,7 @@ Sete fotografias documentais foram removidas da distribuição corrigida porque 
 | Fotos elegíveis para análise quantitativa | 191 | 191 |
 | Divisão por grupo | 44/133 | 44/133 |
 
-Os sete binários que constavam da distribuição sem EXIF foram copiados para armazenamento local privado fora do repositório, com ACL restrita à conta local, Administradores e Sistema. Seus SHA-256 foram comparados com o manifesto público anterior. Os arquivos RAW originais de câmera, com EXIF/GPS, não estavam no checkout e não foram recuperados; portanto, esta retenção comprova a preservação exata das cópias anteriormente distribuídas, não dos arquivos de câmera.
+As sete cópias sem EXIF que constavam da distribuição foram preservadas localmente em armazenamento privado, com ACL restrita à conta local, Administradores e Sistema. Além disso, os sete arquivos RAW de câmera foram localizados na pasta privada de origem, recuperados e preservados em subpasta privada separada. Os hashes dos RAWs coincidem com `SHA256_ORIGINALS.txt` do baseline histórico, e os hashes das cópias sem EXIF coincidem com o manifesto de distribuição. Nenhum RAW foi incluído no branch ou no pacote público.
 
 ## Validações do pacote
 O pacote é verificável por contagem, correspondência com os índices, hashes, decodificação JPEG/RGB, EXIF/GPS, extração e conferência dos hashes pós-extração. Os resultados detalhados e caminhos dos artefatos acompanham a entrega local. A ausência de metadados EXIF não avalia rostos, nomes ou texto visível nos pixels das 198 imagens restantes.

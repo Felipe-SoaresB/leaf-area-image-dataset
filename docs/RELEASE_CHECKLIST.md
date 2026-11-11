@@ -3,7 +3,7 @@
 **Estado em 11/11/2026: PREPARADA LOCALMENTE, NÃO PRONTA PARA PUBLICAR.** Esta edição remove sete fotos documentais sem autorização comprovada. O GitHub continua tendo arquivos acessíveis em `main`, histórico/refs antigas e LFS, e o Zenodo Draft ainda mantém o ZIP histórico de 205 imagens.
 
 ## Dados e invariantes
-- [x] Sete registros históricos confirmados como `non_sample` e fora da avaliação (`include_for_area_evaluation=no`); cópias privadas locais mantidas separadamente.
+- [x] Sete registros históricos confirmados como `non_sample` e fora da avaliação (`include_for_area_evaluation=no`); RAWs privados e cópias anteriormente distribuídas preservados em armazenamento local separado, hashes conferidos.
 - [x] Edição pública de trabalho: 198 JPEGs, 181 grupos, 177 referências ImageJ válidas, 191 imagens elegíveis.
 - [x] Partição preservada: 44 grupos development / 133 final_test.
 - [x] Sete imagens retiradas das tabelas/índices/checksums ativos e do diretório LFS da edição corrigida.
