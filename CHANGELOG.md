@@ -1,12 +1,12 @@
 # Histórico de versões
 
-## v1.0.3 — edição pública corrigida, preparada em 11/11/2026
+## v1.0.3 — edição pública corrigida, publicada no Zenodo em 11/11/2026
 
 - Preparada distribuição de 198 JPEGs após retirar sete fotografias documentais sem comprovação de autorização para redistribuição.
 - Mantidos 181 grupos, 177 grupos ImageJ elegíveis, 191 fotografias quantitativamente elegíveis e divisão de 44/133 grupos; nenhuma área ou tratamento foi alterado.
 - Atualizados índices públicos, hashes, verificadores e documentação para distinguir a coleção histórica de 205 imagens desta edição corrigida.
-- ZIPs de revisão preparados localmente. O Zenodo continua em Draft e os arquivos não foram substituídos.
-- O commit não reescreve o histórico: objetos antigos Git/LFS podem permanecer acessíveis até saneamento coordenado com o GitHub.
+- Edição pública distribuída no Zenodo em quatro arquivos v1.0.3, com validação de integridade informada pelo responsável; DOI: [10.5281/zenodo.24122476](https://doi.org/10.5281/zenodo.24122476).
+- A correção foi incorporada à `main` sem reescrita histórica. Objetos antigos Git/LFS podem permanecer acessíveis; a edição v1.0.3 não os inclui.
 
 ## v1.0.2 — 09/11/2026 (imagens no Git LFS)
 
