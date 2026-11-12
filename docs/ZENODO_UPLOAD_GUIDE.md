@@ -1,16 +1,18 @@
-# Guia de atualização do Zenodo — v1.0.3
+# Registro da publicação no Zenodo — v1.0.3
 
-**O registro `10.5281/zenodo.24122476` deve permanecer em Draft.** Este guia descreve os arquivos locais preparados; nenhum upload, substituição ou publicação foi realizado.
+**Status:** publicado em [10.5281/zenodo.24122476](https://doi.org/10.5281/zenodo.24122476), conforme relatório de publicação de 11/11/2026. A publicação preservou os quatro artefatos v1.0.3; as cópias v1.0.2 foram retiradas do rascunho antes da publicação.
 
-## Pacote preparado
-Em `leaf-area_images_v1.0.3.zip`, há somente os 198 JPEGs públicos e seu manifesto SHA-256. `leaf_area_dataset_documentation_v1.0.3.zip` contém CSVs corrigidos, cartão, dicionário, contexto, exclusões, proveniência, README, licença e citação. Também foram preparados CSVs independentes `images_v1.0.3.csv` e `area_groups_v1.0.3.csv`. Um ZIP combinado para auditoria local contém imagens, CSVs e documentação numa única árvore. `validation_report.json` e `SHA256_PACKAGE.txt` registram hashes e validação.
+## Arquivos publicados
+- `leaf_area_images_v1.0.3.zip`: ZIP das 198 imagens e manifesto de integridade
+- `leaf_area_dataset_documentation_v1.0.3.zip`: documentação e dados
+- `images_v1.0.3.csv`: índice de 198 imagens
+- `area_groups_v1.0.3.csv`: 177 grupos com referências ImageJ utilizáveis
 
-## Passos, somente após autorização do mantenedor
-1. Conferir este pacote com uma segunda pessoa e confirmar autorização/licença para cada arquivo distribuído.
-2. Resolver a exposição do GitHub/LFS e confirmar a edição pública do branch.
-3. Abrir o Draft sem clicar em **Publish**. Registrar localmente a lista e hashes dos arquivos atuais antes de qualquer alteração.
-4. Somente após autorização explícita para upload, substituir os arquivos de dados/documentação do Draft pelos quatro artefatos v1.0.3, atualizar descrição e versão para 198/181/177/191 e preservar DOI reservado.
-5. Baixar novamente cada arquivo do Draft, validar SHA-256 e conteúdo, confirmar os mesmos quatro arquivos e conferir a descrição. Manter o registro em Draft para revisão.
-6. Não clicar em Publish sem autorização expressa posterior.
+## Validação comunicada pelo responsável
+Os quatro uploads foram concluídos e seus MD5 informados pelo Zenodo coincidiram com os arquivos locais. O ZIP de imagens foi validado localmente contendo 198 JPEGs reais, sem as sete fotos documentais excluídas. Os verificadores GitHub Actions para o commit da versão 1.0.3 concluíram com sucesso.
 
-A descrição pública deve diferenciar 205 imagens históricas de 198 na edição corrigida, registrar que a redução remove sete fotografias documentais sem impacto na análise quantitativa e preservar a divisão por grupo de 44/133. Não publicar a lista nominal dos arquivos retirados.
+## Correção de metadados após publicação
+O relato de publicação identificou uma frase residual na **descrição** do Zenodo que afirmava incorretamente que o depósito estava em rascunho e que o DOI não havia sido registrado. **Corrigir apenas essa descrição** em Edit metadata/Description no registro já publicado; não modificar arquivos e não criar nova versão para essa correção textual. Após salvar/publicar a atualização de metadados, verificar se o DOI e os arquivos permanecem intactos.
+
+## Notas
+A data de publicação exibida pelo Zenodo é 22/10/2026, conforme metadado informado. Não inferir que este foi o momento da ação efetiva de publicação: o registro foi confirmado publicado em 11/11/2026. O histórico Git/LFS anterior à v1.0.3 não foi reescrito.
