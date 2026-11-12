@@ -11,4 +11,4 @@ O índice de imagens mantém os status originais para os 198 registros distribu�
 
 `substrate_code` usa A = Areia, V = Vermiculita e T = Terra. `treatment_percent` representa nível relativo à capacidade de retenção de água do substrato. Consulte `docs/DATA_DICTIONARY.md` e `docs/TREATMENT_CODES.md`.
 
-Os CSVs não contêm nomes das imagens retiradas nem IDs de Drive. As fotografias públicas sem EXIF/GPS ficam em `images/data/` via Git LFS. O manifesto correspondente é `checksums/SHA256_RELEASE_NO_EXIF.txt`. A cópia de trabalho histórica do repositório, seus commits antigos e o depósito Zenodo em Draft ainda exigem saneamento independente; esta edição não os apaga retroativamente.
+Os CSVs não contêm nomes das imagens retiradas nem IDs de Drive. As fotografias públicas sem EXIF/GPS ficam em `images/data/` via Git LFS. O manifesto correspondente é `checksums/SHA256_RELEASE_NO_EXIF.txt`. A edição corrigida v1.0.3 está disponível no [Zenodo (DOI 10.5281/zenodo.24122476)](https://doi.org/10.5281/zenodo.24122476). O depósito publicou os índices e as imagens corrigidas; commits antigos e objetos Git LFS anteriores não são apagados por essa distribuição.
