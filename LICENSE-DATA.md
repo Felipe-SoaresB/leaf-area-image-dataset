@@ -1,9 +1,17 @@
-# Notice on data licensing — corrected public edition v1.0.3
+# Data license — corrected public edition v1.0.3
 
-The corrected public edition contains 198 sanitized JPEGs, the two CSV files in `release/`, and the descriptive documentation expressly prepared for this edition. The seven documentary photographs removed in v1.0.3 are outside this edition and are not licensed for redistribution by this notice.
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**
 
-The repository has historically identified the dataset as CC BY 4.0. That statement alone is not documentary proof of authorization by every rights holder or of permission concerning third parties visible in photographs. Written permission for the exact 198-image edition must be archived before a Zenodo release. Until that review is complete, this file records the intended license only and must not be treated as a new grant of rights by the maintainers.
+Copyright © 2026 Tatiane Morais Neves and Felipe Soares Barbosa.
 
-If and when the authors confirm the grant for this edition, the intended license is [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). Reusers would need to credit both named authors, link the license, and indicate changes. Do not extend this notice to Git history, private source files, raw images with EXIF/GPS, software, or third-party content.
+The authors' authorization to distribute the public dataset under CC BY 4.0 was confirmed by the repository maintainer. Retain written documentation of the authorization for archival and academic purposes.
 
-The reserved DOI `10.5281/zenodo.24122476` remains associated with an unpublished Draft. This v1.0.3 package has not been uploaded or published.
+This license applies to the **198 sanitized JPEG photographs** in the current `images/data/` distribution, the curated public datasets `release/images_v1.csv` and `release/area_groups_v1.csv`, and original accompanying descriptive documentation created by the authors. The same corrected public dataset was published on Zenodo as version **1.0.3**: [DOI 10.5281/zenodo.24122476](https://doi.org/10.5281/zenodo.24122476).
+
+**Full license text:** https://creativecommons.org/licenses/by/4.0/legalcode
+
+Reuse and adaptation, including commercial uses, are permitted subject to attribution, a link to the license, and indication of changes. No endorsement by the authors or IFMG is implied. No warranty is provided.
+
+**Scope exclusions:** This notice does not extend to the seven documentary photographs removed from the v1.0.3 distribution; historical Git objects, older versions or third-party content; original private images containing EXIF/GPS; internal curation materials; or Python source code and GitHub workflows (which require separate software licensing). Other personal, privacy and third-party rights are not waived by this license.
+
+**Suggested attribution:** Neves, Tatiane Morais; Barbosa, Felipe Soares. *Tabebuia roseoalba Leaf Area Image Dataset with ImageJ References*. Version 1.0.3. Zenodo. https://doi.org/10.5281/zenodo.24122476. Licensed under CC BY 4.0.
