@@ -3,6 +3,7 @@ message: "Cite este dataset v1.0.3, seus dois coautores e o DOI Zenodo 10.5281/z
 type: dataset
 title: "Tabebuia roseoalba Leaf Area Image Dataset with ImageJ References"
 version: 1.0.3
+license: CC-BY-4.0
 doi: 10.5281/zenodo.24122476
 url: "https://doi.org/10.5281/zenodo.24122476"
 authors:
