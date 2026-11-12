@@ -15,7 +15,7 @@
 - [x] Zenodo contém somente os quatro artefatos v1.0.3.
 - [x] Registro Zenodo publicado e DOI 10.5281/zenodo.24122476 resolvendo para registro público.
 - [x] README, CITATION.cff, licença e ficha APC atualizados com DOI.
-- [ ] **Corrigir a frase residual da descrição pública do Zenodo** que ainda afirma que o depósito está em Draft e o DOI não foi registrado. Alterar metadados da publicação existente, sem alterar arquivos e sem criar nova versão.
+- [x] **Descrição pública do Zenodo corrigida após a publicação**: removidas as afirmações de Draft e DOI não registrado, sem criar nova versão ou alterar os quatro arquivos (conforme conferência comunicada pelo responsável em 11/11/2026).
 - [ ] Criar, se desejado, a GitHub Release/tag formal `v1.0.3`, verificando antes o conteúdo dos arquivos gerados pelo GitHub quando o repositório usa LFS. DOI do Zenodo já é a referência científica persistente.
 
 ## Direitos e versões históricas
